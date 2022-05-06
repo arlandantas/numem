@@ -1,5 +1,5 @@
 // out: ../css/
-$blue: #007;
+$blue: #008;
 $orange: #f26524;
 
 html, body {
@@ -47,7 +47,7 @@ nav {
 }
 section {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     place-items: center;
@@ -119,7 +119,7 @@ h1, span {
     }
 }
 
-#comofunciona {
+#como {
     position: relative;
     #bkg {
         height: 50vh;
@@ -160,7 +160,7 @@ h1, span {
                 span {
                     margin: 1em 0 2em;
                 }
-                svg {
+                img {
                     width: 75px;
                     fill: white;
                 }
@@ -177,6 +177,103 @@ h1, span {
                 border-radius: .5em;
                 color: white;
             }
+        }
+    }
+}
+
+#porque {
+    background-color: #eef;
+    display: flex;
+    flex-direction: column;
+    font-size: 16pt;
+    & > h1 {
+        color: $orange;
+        font-size: 2.5em;
+    }
+    #cards {
+        text-align: left;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        .card {
+            flex-direction: column;
+            background: $blue;
+            border-radius: .5em;
+            margin: .5em .5em;
+            width: 25%;
+            max-width: 250px;
+            overflow: hidden;
+            color: white;
+            h1 {
+                margin: .5em 1em;
+                font-weight: 500;
+                font-size: 1.25em;
+            }
+            img.icon {
+                width: 40px;
+                fill: white;
+                margin: 0 1em 1em;
+                align-self: flex-end;
+            }
+            img:not(.icon) {
+                border-radius: 0 0 .5em .5em;
+                box-shadow: 0px 0px 10px 5px #0005;
+            }
+        }
+    }
+    #button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 2em;
+        a {
+            padding: 1em 2em;
+            border-radius: .5em;
+            color: white;
+            margin-bottom: 2em;
+        }
+    }
+}
+
+#paraquem {
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    column-gap: 2em;
+    row-gap: 3em;
+    font-size: 16pt;
+    padding: 0 2em;
+    align-content: center;
+    h1 {
+        color: $orange;
+    }
+    #img {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        img {
+            width: 500px;
+        }
+    }
+    #text {
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+    }
+    #button {
+        grid-row: 2 / 3;
+        grid-column: 1 / 3;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        a {
+            padding: 1em 2em;
+            border-radius: .5em;
+            color: white;
         }
     }
 }
