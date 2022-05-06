@@ -65,18 +65,26 @@ h1, span {
 }
 
 #home {
-    background:
-        radial-gradient(circle, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 25%, rgba(255,255,255,0) 50%) 20vw 50vh/40% no-repeat,
-        radial-gradient(circle, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 25%, rgba(255,255,255,0) 50%) 60vw 0vh/70% no-repeat,
-        $blue;
     position: relative;
     font-size: 20pt;
     text-align: left;
-    overflow: hidden;
+    // overflow-x: hidden;
     flex-direction: column;
     align-items: flex-start;
     @media screen and (max-width: 1000px) {
         font-size: 16pt;
+    }
+    #bkg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% + 50vh);
+        z-index: -1;
+        background:
+            radial-gradient(circle, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 25%, rgba(255,255,255,0) 50%) 20vw 50vh/500px 500px no-repeat,
+            radial-gradient(circle, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 25%, rgba(255,255,255,0) 50%) 60vw 0vh/800px 800px no-repeat,
+            $blue;
     }
     #text {
         color: white;
@@ -112,6 +120,7 @@ h1, span {
         min-width: 100%;
         min-height: 100%;
         z-index: -1;
+        display: none;
     }
 }
 
@@ -123,7 +132,7 @@ h1, span {
         position: absolute;
         top: 0;
         left: 0;
-        background: $blue;
+        // background: green;
         z-index: -1;
     }
     #content {
@@ -295,7 +304,7 @@ h1, span {
         .relato {
             flex-direction: column;
             border-radius: .5em;
-            background: #ccc;
+            background: #ddd;
             width: 250px;
             padding: 1.5em;
             margin: 1em;
@@ -322,6 +331,13 @@ h1, span {
         color: white;
         font-size: 2em;
         margin: 2em 0;
+        flex-direction: row;
+        &::after, &::before{
+            content: url('../images/fa-study.svg');
+            margin: 0 1em;
+            width: 1em;
+            height: 1em;
+        }
     }
     #planos {
         flex-direction: row;
@@ -346,9 +362,24 @@ h1, span {
                 margin: 0;
                 padding: 0;
                 li {
+                    // display: list-item;
                     padding: 0;
                     margin: .5em 0;
-                    font-size: 1.5em;
+                    font-size: 1.25em;
+                    // list-style-image: url('../images/fa-study.svg');
+                    list-style: none;
+                    flex-direction: row;
+                    &::before{
+                        content: url('../images/fa-check.svg');
+                        margin: 0 1em 0 0;
+                        width: 1em;
+                        height: 1em;
+                    }
+                    &.disabled {
+                        &::before {
+                            content: url('../images/fa-times-circle.svg');
+                        }
+                    }
                 }
             }
         }
