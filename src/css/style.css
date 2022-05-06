@@ -1,0 +1,188 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+*:not(html, document, header, body, meta, title, link, script, style) {
+  display: flex;
+}
+
+nav {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1em 2em 2em;
+  transition: background-color 1s;
+  z-index: 1000;
+}
+nav.scrolled {
+  background: linear-gradient(180deg, #050054 0%, #090979 80%, rgba(0, 0, 0, 0) 100%);
+}
+nav #links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  place-items: center;
+}
+nav #links a {
+  text-decoration: none;
+  padding: 1em 2em;
+  color: white;
+  border-radius: 0.5em;
+  text-transform: uppercase;
+}
+nav #links a.highlight {
+  background: #f26524;
+}
+nav #logo {
+  height: 50px;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+
+.bkg-orange {
+  background: #f26524;
+}
+
+.bkg-blue {
+  background: #007;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+h1, span {
+  line-height: 1.5em;
+}
+
+#home {
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 25%, rgba(255, 255, 255, 0) 50%) 20vw 50vh/40% no-repeat, radial-gradient(circle, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 25%, rgba(255, 255, 255, 0) 50%) 60vw 0vh/70% no-repeat, #007;
+  position: relative;
+  font-size: 20pt;
+  text-align: left;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+@media screen and (max-width: 1000px) {
+  #home {
+    font-size: 16pt;
+  }
+}
+#home #text {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0 1em 0 2em;
+  width: fit-content;
+  margin-bottom: 1em;
+  width: 50vw;
+  max-width: 500px;
+}
+@media screen and (min-width: 1000px) {
+  #home #text {
+    max-width: 800px;
+    margin-left: 3em;
+  }
+}
+#home #text h1 {
+  margin: 0 0 0.2em 0;
+}
+#home #text span {
+  margin: 1em 0 2em;
+}
+#home #text a {
+  padding: 1em 2em;
+  text-decoration: none;
+  color: white;
+  font-size: 0.8em;
+  width: max-content;
+  border-radius: 0.5em;
+}
+#home #smiling {
+  position: absolute;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+#comofunciona {
+  position: relative;
+}
+#comofunciona #bkg {
+  height: 50vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #007;
+  z-index: -1;
+}
+#comofunciona #content {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-size: 16pt;
+}
+#comofunciona #content > h1 {
+  margin: 2em 0 1em;
+}
+#comofunciona #content > span {
+  margin: 0 0 2em;
+}
+#comofunciona #content #cards {
+  text-align: left;
+  flex-direction: row;
+}
+#comofunciona #content #cards .card {
+  flex-direction: column;
+  background: #f26524;
+  border-radius: 1em;
+  margin: 0 1em;
+  padding: 2em;
+  width: 33%;
+  max-width: 300px;
+}
+#comofunciona #content #cards .card h1 {
+  margin: 0.5em 0 0;
+}
+#comofunciona #content #cards .card span {
+  margin: 1em 0 2em;
+}
+#comofunciona #content #cards .card svg {
+  width: 75px;
+  fill: white;
+}
+#comofunciona #content #button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+#comofunciona #content #button a {
+  padding: 1em 2em;
+  border-radius: 0.5em;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
