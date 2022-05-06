@@ -1,11 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,800;1,400;1,800&display=swap");
 html, body {
   margin: 0;
   padding: 0;
+  color: #3a3a3a;
 }
 
 * {
+  font-family: "Rubik", sans-serif;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
 }
 *:not(html, document, header, body, meta, title, link, script, style) {
   display: flex;
@@ -32,7 +34,7 @@ nav #links {
 nav #links a {
   text-decoration: none;
   padding: 1em 2em;
-  color: white;
+  color: #f5f5f5;
   border-radius: 0.5em;
   text-transform: uppercase;
 }
@@ -55,7 +57,7 @@ section {
 }
 
 .bkg-blue {
-  background: #008 !important;
+  background: #04098b !important;
 }
 
 a {
@@ -65,6 +67,10 @@ a {
 
 h1, span {
   line-height: 1.5em;
+}
+
+h1 {
+  font-weight: 900;
 }
 
 #home {
@@ -86,10 +92,10 @@ h1, span {
   width: 100%;
   height: calc(100% + 50vh);
   z-index: -1;
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 25%, rgba(255, 255, 255, 0) 50%) 20vw 50vh/500px 500px no-repeat, radial-gradient(circle, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 25%, rgba(255, 255, 255, 0) 50%) 60vw 0vh/800px 800px no-repeat, #008;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 25%, rgba(255, 255, 255, 0) 50%) 20vw 50vh/500px 500px no-repeat, radial-gradient(circle, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 25%, rgba(255, 255, 255, 0) 50%) 60vw 0vh/800px 800px no-repeat, #04098b;
 }
 #home #text {
-  color: white;
+  color: #f5f5f5;
   flex-direction: column;
   padding: 0;
   margin: 0 1em 0 2em;
@@ -113,7 +119,7 @@ h1, span {
 #home #text a {
   padding: 1em 2em;
   text-decoration: none;
-  color: white;
+  color: #f5f5f5;
   font-size: 0.8em;
   width: max-content;
   border-radius: 0.5em;
@@ -142,7 +148,7 @@ h1, span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #f5f5f5;
   text-align: center;
   font-size: 16pt;
 }
@@ -173,7 +179,7 @@ h1, span {
 }
 #como #content #cards .card img {
   width: 75px;
-  fill: white;
+  fill: #f5f5f5;
 }
 #como #content #button {
   flex-direction: row;
@@ -184,11 +190,11 @@ h1, span {
 #como #content #button a {
   padding: 1em 2em;
   border-radius: 0.5em;
-  color: white;
+  color: #f5f5f5;
 }
 
 #porque {
-  background-color: #eef;
+  background-color: #f5f5f5;
   flex-direction: column;
   font-size: 16pt;
 }
@@ -204,13 +210,13 @@ h1, span {
 }
 #porque #cards .card {
   flex-direction: column;
-  background: #008;
+  background: #04098b;
   border-radius: 0.5em;
   margin: 0.5em 0.5em;
   width: 25%;
   max-width: 250px;
   overflow: hidden;
-  color: white;
+  color: #f5f5f5;
 }
 #porque #cards .card h1 {
   margin: 0.5em 1em;
@@ -219,7 +225,6 @@ h1, span {
 }
 #porque #cards .card img.icon {
   width: 40px;
-  fill: white;
   margin: 0 1em 1em;
   align-self: flex-end;
 }
@@ -236,7 +241,7 @@ h1, span {
 #porque #button a {
   padding: 1em 2em;
   border-radius: 0.5em;
-  color: white;
+  color: #f5f5f5;
   margin-bottom: 2em;
 }
 
@@ -279,7 +284,7 @@ h1, span {
 #paraquem #button a {
   padding: 1em 2em;
   border-radius: 0.5em;
-  color: white;
+  color: #f5f5f5;
 }
 
 #conheca {
@@ -306,10 +311,11 @@ h1, span {
 #relatos #list .relato {
   flex-direction: column;
   border-radius: 0.5em;
-  background: #ddd;
+  background: #f5f5f5;
   width: 250px;
   padding: 1.5em;
   margin: 1em;
+  color: #3a3a3a;
 }
 #relatos #list .relato #img {
   width: 150px;
@@ -329,7 +335,7 @@ h1, span {
   flex-direction: column;
 }
 #comecar > h1 {
-  color: white;
+  color: #f5f5f5;
   font-size: 2em;
   margin: 2em 0;
   flex-direction: row;
@@ -350,12 +356,12 @@ h1, span {
   align-items: center;
   padding: 2em;
   width: 400px;
-  color: #008;
-  background: white;
+  color: #04098b;
+  background: #f5f5f5;
   margin: 0 1em;
 }
 #comecar #planos .plano.bkg-blue {
-  color: white;
+  color: #f5f5f5;
 }
 #comecar #planos .plano h1 {
   font-size: 2.5em;
@@ -391,7 +397,82 @@ h1, span {
 #comecar #button a {
   padding: 1em 2em;
   border-radius: 0.5em;
-  color: white;
+  color: #f5f5f5;
+}
+
+#perguntas {
+  font-size: 16pt;
+  background: #f5f5f5;
+  padding: 3em;
+}
+#perguntas h1 {
+  color: #04098b;
+  font-size: 2em;
+}
+#perguntas #lista {
+  flex-direction: column;
+  width: 800px;
+  max-width: 90%;
+  line-height: 1.5em;
+}
+#perguntas #lista .pergunta {
+  margin: 0.5em;
+  overflow: hidden;
+  border-radius: 0.5em;
+  border: 1px solid #f26524;
+}
+#perguntas #lista .pergunta .titulo {
+  color: #f26524;
+  cursor: pointer;
+  padding: 1em;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#perguntas #lista .pergunta .ck_pergunta {
+  display: none;
+}
+#perguntas #lista .pergunta .ck_pergunta:not(:checked) ~ .conteudo {
+  display: none;
+}
+#perguntas #lista .pergunta .conteudo {
+  padding: 0 1em 1em;
+}
+
+#inscricao_email {
+  min-height: 300px;
+}
+#inscricao_email h1 {
+  color: #f26524;
+}
+
+#rodape {
+  flex-direction: row;
+  height: max-content;
+  min-height: max-content;
+  padding: 4em 0;
+  background: #3a3a3a;
+  color: #f5f5f5;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+#rodape .col {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 1em;
+}
+#rodape .col h1 {
+  margin: 0;
+}
+#rodape .col a {
+  color: #f5f5f5;
+  margin: 0.5em 0;
+}
+#rodape .col#redes {
+  flex-direction: row;
+}
+#rodape .col#redes a {
+  margin: 1em;
 }
 
 /*# sourceMappingURL=style.css.map */

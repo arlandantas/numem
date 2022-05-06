@@ -1,14 +1,20 @@
 // out: ../css/
-$blue: #008;
+$blue: #04098b;
 $orange: #f26524;
+$cinza_escuro: #3a3a3a;
+$cinza_claro: #f5f5f5;
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,800;1,400;1,800&display=swap');
 
 html, body {
     margin: 0;
     padding: 0;
+    color: $cinza_escuro;
 }
 * {
+    font-family: 'Rubik', sans-serif;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    // font-family: Arial, Helvetica, sans-serif;
     &:not(html, document, header, body, meta, title, link, script, style) {
         display: flex;
         flex-direction: column;
@@ -26,13 +32,13 @@ nav {
         background: linear-gradient(180deg, rgba(5,0,84,1) 0%, rgba(9,9,121,1) 80%, rgba(0,0,0,0) 100%);
     }
     #links {
-                flex-direction: row;
+        flex-direction: row;
         justify-content: space-between;
         place-items: center;
         a {
             text-decoration: none;
             padding: 1em 2em;
-            color: white;
+            color: $cinza_claro;
             border-radius: .5em;
             text-transform: uppercase;
             &.highlight {
@@ -63,6 +69,9 @@ a {
 h1, span {
     line-height: 1.5em;
 }
+h1 {
+    font-weight: 900;
+}
 
 #home {
     position: relative;
@@ -87,7 +96,7 @@ h1, span {
             $blue;
     }
     #text {
-        color: white;
+        color: $cinza_claro;
         flex-direction: column;
         padding: 0;
         margin: 0 1em 0 2em;
@@ -108,7 +117,7 @@ h1, span {
         a {
             padding: 1em 2em;
             text-decoration: none;
-            color: white;
+            color: $cinza_claro;
             font-size: .8em;
             width: max-content;
             border-radius: .5em;
@@ -139,7 +148,7 @@ h1, span {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: white;
+        color: $cinza_claro;
         text-align: center;
         font-size: 16pt;
         & > h1 {
@@ -167,7 +176,7 @@ h1, span {
                 }
                 img {
                     width: 75px;
-                    fill: white;
+                    fill: $cinza_claro;
                 }
             }
         }
@@ -179,14 +188,14 @@ h1, span {
             a {
                 padding: 1em 2em;
                 border-radius: .5em;
-                color: white;
+                color: $cinza_claro;
             }
         }
     }
 }
 
 #porque {
-    background-color: #eef;
+    background-color: $cinza_claro;
     flex-direction: column;
     font-size: 16pt;
     & > h1 {
@@ -206,7 +215,7 @@ h1, span {
             width: 25%;
             max-width: 250px;
             overflow: hidden;
-            color: white;
+            color: $cinza_claro;
             h1 {
                 margin: .5em 1em;
                 font-weight: 500;
@@ -214,7 +223,6 @@ h1, span {
             }
             img.icon {
                 width: 40px;
-                fill: white;
                 margin: 0 1em 1em;
                 align-self: flex-end;
             }
@@ -232,7 +240,7 @@ h1, span {
         a {
             padding: 1em 2em;
             border-radius: .5em;
-            color: white;
+            color: $cinza_claro;
             margin-bottom: 2em;
         }
     }
@@ -275,7 +283,7 @@ h1, span {
         a {
             padding: 1em 2em;
             border-radius: .5em;
-            color: white;
+            color: $cinza_claro;
         }
     }
 }
@@ -304,10 +312,11 @@ h1, span {
         .relato {
             flex-direction: column;
             border-radius: .5em;
-            background: #ddd;
+            background: $cinza_claro;
             width: 250px;
             padding: 1.5em;
             margin: 1em;
+            color: $cinza_escuro;
             #img {
                 width: 150px;
                 height: 150px;
@@ -328,7 +337,7 @@ h1, span {
     background: url(https://www.transparenttextures.com/patterns/crissxcross.png), $orange;
     flex-direction: column;
     & > h1 {
-        color: white;
+        color: $cinza_claro;
         font-size: 2em;
         margin: 2em 0;
         flex-direction: row;
@@ -349,10 +358,10 @@ h1, span {
             padding: 2em;
             width: 400px;
             color: $blue;
-            background: white;
+            background: $cinza_claro;
             margin: 0 1em;
             &.bkg-blue {
-                color: white;
+                color: $cinza_claro;
             }
             h1 {
                 font-size: 2.5em;
@@ -393,7 +402,82 @@ h1, span {
         a {
             padding: 1em 2em;
             border-radius: .5em;
-            color: white;
+            color: $cinza_claro;
+        }
+    }
+}
+
+#perguntas {
+    font-size: 16pt;
+    background: $cinza_claro;
+    padding: 3em;
+    h1 {
+        color: $blue;
+        font-size: 2em;
+    }
+    #lista {
+        flex-direction: column;
+        width: 800px;
+        max-width: 90%;
+        line-height: 1.5em;
+        .pergunta {
+            margin: .5em;
+            overflow: hidden;
+            border-radius: .5em;
+            border: 1px solid $orange;
+            .titulo {
+                color: $orange;
+                cursor: pointer;
+                padding: 1em;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .ck_pergunta {
+                display: none;
+            }
+            .ck_pergunta:not(:checked) ~ .conteudo {
+                display: none;
+            }
+            .conteudo {
+                padding: 0 1em 1em;
+            }
+        }
+    }
+}
+
+#inscricao_email {
+    min-height: 300px;
+    h1 {
+        color: $orange;
+    }
+}
+
+#rodape {
+    flex-direction: row;
+    height: max-content;
+    min-height: max-content;
+    padding: 4em 0;
+    background: $cinza_escuro;
+    color: $cinza_claro;
+    align-items: flex-start;
+    justify-content: space-around;
+    .col {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 1em;
+        h1 {
+            margin: 0;
+        }
+        a {
+            color: $cinza_claro;
+            margin: .5em 0;
+        }
+        &#redes {
+            flex-direction: row;
+            a {
+                margin: 1em;
+            }
         }
     }
 }
