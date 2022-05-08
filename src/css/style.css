@@ -612,6 +612,7 @@ h1 {
 }
 #rodape .col#redes {
   flex-direction: row;
+  align-items: center;
 }
 #rodape .col#redes a {
   padding: 0.5em;
