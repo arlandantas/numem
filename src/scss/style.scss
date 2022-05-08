@@ -1,4 +1,3 @@
-// out: ../css/
 $blue: #04098b;
 $orange: #f26524;
 $cinza_escuro: #3a3a3a;
@@ -14,13 +13,12 @@ html, body {
 * {
     font-family: 'Rubik', sans-serif;
     box-sizing: border-box;
-    // font-family: Arial, Helvetica, sans-serif;
-    &:not(html, document, header, body, meta, title, link, script, style) {
+    &:not(html, document, header, body, meta, title, link, script, style, .glider-track) {
         display: flex;
         flex-direction: column;
     }
 }
-nav {
+nav#fix_header {
     position: fixed;
     flex-direction: row;
     justify-content: space-between;
@@ -43,12 +41,12 @@ nav {
             text-transform: uppercase;
             &.highlight {
                 background: $orange;
-                @media screen and (max-width: 500px) {
+                @media screen and (max-width: 600px) {
                     &:not(.mobile) {
                         display: none;
                     }
                 }
-                @media screen and (min-width: 500px) {
+                @media screen and (min-width: 600px) {
                     &.mobile {
                         display: none;
                     }
@@ -59,9 +57,6 @@ nav {
     #logo {
         height: 50px;
         margin: auto;
-        @media screen and (max-width: 700px) {
-            height: 30px;
-        }
     }
 }
 section {
@@ -91,7 +86,6 @@ h1 {
     position: relative;
     font-size: 20pt;
     text-align: left;
-    // overflow-x: hidden;
     flex-direction: column;
     align-items: flex-start;
     @media screen and (max-width: 1000px) {
@@ -101,9 +95,6 @@ h1 {
         justify-content: flex-end;
     }
     #bkg {
-        @media screen and (max-width: 900px) {
-            height: calc(100% + 100vh);
-        }
         position: absolute;
         top: 0;
         left: 0;
@@ -150,7 +141,6 @@ h1 {
     #smiling {
         position: absolute;
         bottom: 0;
-        // min-width: 100%;
         min-height: 100%;
         z-index: -1;
         filter: opacity(.2);
@@ -163,7 +153,6 @@ h1 {
         @media screen and (max-width: 700px) {
             left: 10vw;
             width: 80vw;
-            // margin-left: 1em;
         }
         img {
             height: 100vh;
@@ -174,15 +163,6 @@ h1 {
 
 #como {
     position: relative;
-    #bkg {
-        height: 50vh;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        // background: green;
-        z-index: -1;
-    }
     #content {
         flex-direction: column;
         justify-content: center;
@@ -197,27 +177,40 @@ h1 {
             margin: 0 0 2em;
         }
         #cards {
-            text-align: left;
             flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            .card {
-                flex-direction: column;
-                background: $orange;
-                border-radius: 1em;
-                margin: 1em;
-                padding: 2em;
-                width: 300px;
-                max-width: 90vw;
-                h1 {
-                    margin: .5em 0 0;
+            width: 1300px;
+            max-width: 100vw;
+            align-items: center;
+            padding: 0 2em;
+            .botao {
+                flex-grow: 0;
+                font-size: 1.5em;
+                cursor: pointer;
+                color: $orange;
+                &.disabled {
+                    color: $cinza_claro;
+                    cursor: default;
                 }
-                span {
-                    margin: 1em 0 2em;
-                }
-                img {
-                    width: 75px;
-                    fill: $cinza_claro;
+            }
+            #itens {
+                flex-grow: 1;
+                text-align: left;
+                .card {
+                    flex-direction: column;
+                    background: $orange;
+                    border-radius: 1em;
+                    margin: 1em;
+                    padding: 2em;
+                    h1 {
+                        margin: .5em 0 0;
+                    }
+                    span {
+                        margin: 1em 0 2em;
+                    }
+                    img {
+                        width: 50px;
+                        fill: $cinza_claro;
+                    }
                 }
             }
         }
@@ -241,7 +234,7 @@ h1 {
     font-size: 16pt;
     & > h1 {
         color: $orange;
-        font-size: 2.5em;
+        font-size: 2em;
         text-align: center;
         margin: 1em;
         @media screen and (max-width: 600px) {
@@ -249,36 +242,50 @@ h1 {
         }
     }
     #cards {
-        text-align: left;
         flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 0 1em;
-        .card {
-            flex-direction: column;
-            background: $blue;
-            border-radius: .5em;
-            margin: .5em .5em;
-            width: 300px;
-            max-width: 90vw;
-            overflow: hidden;
-            color: $cinza_claro;
-            h1 {
-                margin: .5em 1em;
-                font-weight: 500;
-                font-size: 1.25em;
-                @media screen and (max-width: 500px) {
-                    font-size: 1em;
+        max-width: 100vw;
+        align-items: center;
+        padding: 0 2em;
+        .botao {
+            flex-grow: 0;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: $orange;
+            &.disabled {
+                color: $cinza_claro;
+                cursor: default;
+            }
+        }
+        #itens {
+            flex-grow: 1;
+            text-align: left;
+            align-items: flex-start;
+            margin: 0 1em;
+            .card {
+                flex-direction: column;
+                background: $blue;
+                border-radius: .5em;
+                margin: .5em;
+                max-width: 90vw;
+                overflow: hidden;
+                color: $cinza_claro;
+                h1 {
+                    margin: .5em 1em;
+                    font-weight: 500;
+                    font-size: 1.25em;
+                    @media screen and (max-width: 500px) {
+                        font-size: 1em;
+                    }
                 }
-            }
-            img.icon {
-                width: 40px;
-                margin: 0 1em 1em;
-                align-self: flex-end;
-            }
-            img:not(.icon) {
-                border-radius: 0 0 .5em .5em;
-                box-shadow: 0px 0px 10px 5px #0005;
+                img.icon {
+                    width: 30px;
+                    margin: 0 30px 30px;
+                    align-self: flex-end;
+                }
+                img:not(.icon) {
+                    border-radius: 0 0 .5em .5em;
+                    box-shadow: 0px 0px 10px 5px #0005;
+                }
             }
         }
     }
@@ -382,28 +389,41 @@ h1 {
     }
     #list {
         flex-direction: row;
-        margin: 2em 0;
-        flex-wrap: wrap;
-        justify-content: center;
-        .relato {
-            flex-direction: column;
-            border-radius: .5em;
-            background: $cinza_claro;
-            width: 300px;
-            max-width: 90vw;
-            padding: 1.5em;
-            margin: 1em;
-            color: $cinza_escuro;
-            #img {
-                width: 150px;
-                height: 150px;
-                border-radius: 50%;
-                overflow: hidden;
-                margin: 0 auto 1.5em;
-                flex-direction: row;
-                justify-content: center;
-                img {
-                    height: 100%;
+        max-width: 100%;
+        align-items: center;
+        padding: 0 2em;
+        .botao {
+            flex-grow: 0;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: $orange;
+            &.disabled {
+                color: $cinza_claro;
+                cursor: default;
+            }
+        }
+        #itens {
+            flex-grow: 1;
+            flex-direction: row;
+            .relato {
+                flex-direction: column;
+                border-radius: .5em;
+                background: $cinza_claro;
+                padding: 1.5em;
+                margin: 1em;
+                color: $cinza_escuro;
+                flex-shrink: 0;
+                #img {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin: 0 auto 1.5em;
+                    flex-direction: row;
+                    justify-content: center;
+                    img {
+                        height: 100%;
+                    }
                 }
             }
         }
@@ -451,11 +471,9 @@ h1 {
                 margin: 0;
                 padding: 0;
                 li {
-                    // display: list-item;
                     padding: 0;
                     margin: .5em 0;
                     font-size: 1.25em;
-                    // list-style-image: url('../images/fa-study.svg');
                     list-style: none;
                     flex-direction: row;
                     &::before{
@@ -564,7 +582,8 @@ h1 {
         &#redes {
             flex-direction: row;
             a {
-                padding: 1em;
+                padding: .5em;
+                margin: .5em;
             }
         }
     }

@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escola Numem</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./libs/glider/glider.min.css">
+    <script src="./libs/glider/glider.min.js"></script>
 </head>
 <body>
     <nav id="fix_header">
         <a href="#home">
-            <img id="logo" src="https://logodownload.org/wp-content/uploads/2019/11/firefox-logo.png" alt="firefox logo">
+            <img id="logo" src="./images/logotipo-laranja-branco.svg" alt="firefox logo">
         </a>
         <div id="links">
             <a href="#entrar">Entrar</a>
@@ -32,26 +34,35 @@
         </div>
     </section>
     <section id="como">
-        <div id="bkg"></div>
         <div id="content">
             <h1>Conheça a vontade de Deus e transforme sua vida para sempre!</h1>
             <span>Como é estudar na Escola Numem</span>
             <div id="cards">
-                <div class="card">
-                    <h1>Aprenda</h1>
-                    <span>Teologia na sua língua, sem complicação.</span>
-                    <img class="icon" src="./images/fa-study.svg" alt="ícone de estudo">
+                <div id="como_ant" class="botao">◀</div>
+                <div id="itens">
+                    <div>
+                        <div class="card">
+                            <h1>Aprenda</h1>
+                            <span>Teologia na sua língua, sem complicação.</span>
+                            <img class="icon" src="./images/fa-study.svg" alt="ícone de estudo">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card">
+                            <h1>Aplique</h1>
+                            <span>Concilie os aprendizados bíblicos com seu dia-a-dia.</span>
+                            <img class="icon" src="./images/fa-study.svg" alt="ícone de estudo">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card">
+                            <h1>Pratique</h1>
+                            <span>Te deixamos preparados para a prática na vida diária.</span>
+                            <img class="icon" src="./images/fa-study.svg" alt="ícone de estudo">
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <h1>Aplique</h1>
-                    <span>Concilie os aprendizados bíblicos com seu dia-a-dia.</span>
-                    <img class="icon" src="./images/fa-study.svg" alt="ícone de estudo">
-                </div>
-                <div class="card">
-                    <h1>Pratique</h1>
-                    <span>Te deixamos preparados para a prática na vida diária.</span>
-                    <img class="icon" src="./images/fa-study.svg" alt="ícone de estudo">
-                </div>
+                <div id="como_seg" class="botao">▶</div>
             </div>
             <div id="button">
                 <a href="#comecar" class="bkg-blue">Saiba Mais</a>
@@ -61,26 +72,38 @@
     <section id="porque">
         <h1>Por que estudar com a gente?</h1>
         <div id="cards">
-            <div class="card">
-                <img src="./images/smiling.jpg" alt="Homem sorrindo">
-                <h1>Discussão de temas atuais e relevantes à luz da Bíblia</h1>
-                <img class="icon" src="./images/fa-study.svg" alt="ícone de estudo">
+            <div id="porque_ant" class="botao">◀</div>
+            <div id="itens">
+                <div>
+                    <div class="card">
+                        <img src="./images/smiling.jpg" alt="Homem sorrindo">
+                        <h1>Discussão de temas atuais e relevantes à luz da Bíblia</h1>
+                        <img class="icon" src="./images/logo-laranja-branco.svg" alt="ícone de estudo">
+                    </div>
+                </div>
+                <div>
+                    <div class="card">
+                        <img src="./images/smiling.jpg" alt="Homem sorrindo">
+                        <h1>Comunidade de alunos no Facebook e Telegram</h1>
+                        <img class="icon" src="./images/logo-laranja-branco.svg" alt="ícone de estudo">
+                    </div>
+                </div>
+                <div>
+                    <div class="card">
+                        <img src="./images/smiling.jpg" alt="Homem sorrindo">
+                        <h1>Linguagem Acessível para seu aprendizado</h1>
+                        <img class="icon" src="./images/logo-laranja-branco.svg" alt="ícone de estudo">
+                    </div>
+                </div>
+                <div>
+                    <div class="card">
+                        <img src="./images/smiling.jpg" alt="Homem sorrindo">
+                        <h1>Teologia fiel às Escrituras para o seu conhecimento</h1>
+                        <img class="icon" src="./images/logo-laranja-branco.svg" alt="ícone de estudo">
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <img src="./images/smiling.jpg" alt="Homem sorrindo">
-                <h1>Comunidade de alunos no Facebook e Telegram</h1>
-                <img class="icon" src="./images/fa-study.svg" alt="ícone de estudo">
-            </div>
-            <div class="card">
-                <img src="./images/smiling.jpg" alt="Homem sorrindo">
-                <h1>Linguagem Acessível para seu aprendizado</h1>
-                <img class="icon" src="./images/fa-study.svg" alt="ícone de estudo">
-            </div>
-            <div class="card">
-                <img src="./images/smiling.jpg" alt="Homem sorrindo">
-                <h1>Teologia fiel às Escrituras para o seu conhecimento</h1>
-                <img class="icon" src="./images/fa-study.svg" alt="ícone de estudo">
-            </div>
+            <div id="porque_seg" class="botao">▶</div>
         </div>
         <div id="button">
             <a href="#comecar" class="bkg-orange">Comece Agora</a>
@@ -111,38 +134,60 @@
     <section id="relatos">
         <div id="pattern_separator"></div>
         <div id="list">
-            <div class="relato">
-                <div id="img">
-                    <img src="./images/smiling.jpg" alt="Homem sorrindo">
+            <div id="relato_ant" class="botao">◀</div>
+            <div id="itens">
+                <div>
+                    <div class="relato">
+                        <div id="img">
+                            <img src="./images/smiling.jpg" alt="Homem sorrindo">
+                        </div>
+                        <span>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </span>
+                    </div>
                 </div>
-                <span>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </span>
-            </div>
-            <div class="relato">
-                <div id="img">
-                    <img src="./images/smiling.jpg" alt="Homem sorrindo">
+                <div>
+                    <div class="relato">
+                        <div id="img">
+                            <img src="./images/smiling.jpg" alt="Homem sorrindo">
+                        </div>
+                        <span>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </span>
+                    </div>
                 </div>
-                <span>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </span>
-            </div>
-            <div class="relato">
-                <div id="img">
-                    <img src="./images/smiling.jpg" alt="Homem sorrindo">
+                <div>
+                    <div class="relato">
+                        <div id="img">
+                            <img src="./images/smiling.jpg" alt="Homem sorrindo">
+                        </div>
+                        <span>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </span>
+                    </div>
                 </div>
-                <span>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </span>
-            </div>
-            <div class="relato">
-                <div id="img">
-                    <img src="./images/smiling.jpg" alt="Homem sorrindo">
+                <div>
+                    <div class="relato">
+                        <div id="img">
+                            <img src="./images/smiling.jpg" alt="Homem sorrindo">
+                        </div>
+                        <span>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </span>
+                    </div>
                 </div>
-                <span>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </span>
+                <div>
+                    <div class="relato">
+                        <div id="img">
+                            <img src="./images/smiling.jpg" alt="Homem sorrindo">
+                        </div>
+                        <span>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </span>
+                    </div>
+                </div>
             </div>
+            <div id="relato_seg" class="botao">▶</div>
         </div>
     </section>
     <section id="comecar">
@@ -206,7 +251,7 @@
     </section>
     <section id="rodape">
         <div class="col">
-            <img height="75px" src="https://logodownload.org/wp-content/uploads/2019/11/firefox-logo.png" alt="Logo do Firefox">
+            <img height="75px" src="./images/logotipo-laranja-branco.svg" alt="Logo do Firefox">
         </div>
         <div class="col">
             <h1>Sobre</h1>
@@ -218,8 +263,12 @@
             <a href="./privacidade.html">Suporte</a>
         </div>
         <div class="col" id="redes">
-            <a href="https://instagram.com">Insta</a>
-            <a href="https://facebook.com">Face</a>
+            <a href="https://instagram.com">
+                <img width="30px" src="./images/fa-instagram-brands.svg" alt="instagram">
+            </a>
+            <a href="https://facebook.com">
+                <img width="30px" src="./images/fa-facebook-brands.svg" alt="Facebook">
+            </a>
         </div>
     </section>
     <script src="./js/index.js"></script>
