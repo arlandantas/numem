@@ -448,9 +448,13 @@ h1 {
   margin: 0 auto 1.5em;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: nowrap;
+  background: url("../images/smiling.jpg") center/cover;
 }
 #relatos #list #itens .relato #img img {
   height: 100%;
+  width: auto;
+  display: none;
 }
 
 #comecar {
@@ -464,8 +468,10 @@ h1 {
   flex-direction: row;
 }
 #comecar > h1::after, #comecar > h1::before {
-  content: url("../images/fa-study.svg");
-  margin: 0 1em;
+  content: "";
+  background-image: url("../images/logo-azul-branco.svg");
+  background-size: contain;
+  margin: auto 1em;
   width: 1em;
   height: 1em;
 }
