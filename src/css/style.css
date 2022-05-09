@@ -1,4 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,800;1,400;1,800&display=swap");
+@charset "UTF-8";
+/**
+#como
+Impedir quebra de linha
+Alinhar ícones abaixo
+Setas apenas outline
+
+#porque
+Alinhar logo
+
+#relatos
+Espaços do pattern
+Diminuir opacidade do background
+*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,800;1,400;1,800&display=swap");
 html, body {
   margin: 0;
   padding: 0;
@@ -6,7 +20,7 @@ html, body {
 }
 
 * {
-  font-family: "Rubik", sans-serif;
+  font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
 }
 *:not(html, document, header, body, meta, title, link, script, style, .glider-track) {
@@ -19,12 +33,12 @@ nav#fix_header {
   flex-direction: row;
   justify-content: space-between;
   width: 100vw;
-  padding: 1em 2em 2em;
-  transition: background 1s;
+  padding: 1em 2em;
+  transition: background 0.25s;
   z-index: 1000;
 }
 nav#fix_header.scrolled {
-  background: linear-gradient(180deg, #04098b 0%, #04098b 80%, #0080 100%);
+  background: #04098b;
 }
 nav#fix_header #links {
   flex-direction: row;
@@ -108,7 +122,8 @@ h1 {
   width: 100%;
   height: calc(100% + 50vh);
   z-index: -1;
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 25%, rgba(255, 255, 255, 0) 50%) 20vw 50vh/500px 500px no-repeat, radial-gradient(circle, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 25%, rgba(255, 255, 255, 0) 50%) 60vw 0vh/800px 800px no-repeat, #04098b;
+  background: url("../images/grandientefundo.png");
+  background-size: cover;
 }
 #home #text {
   color: #f5f5f5;
@@ -145,6 +160,7 @@ h1 {
   font-size: 0.8em;
   width: max-content;
   border-radius: 0.5em;
+  box-shadow: #f26524 0px 0px 10px 5px;
 }
 #home #smiling {
   position: absolute;
@@ -152,18 +168,11 @@ h1 {
   min-height: 100%;
   z-index: -1;
   filter: opacity(0.2);
-  width: 30vw;
   overflow: hidden;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  left: 60vw;
-}
-@media screen and (max-width: 700px) {
-  #home #smiling {
-    left: 10vw;
-    width: 80vw;
-  }
+  right: 0;
 }
 #home #smiling img {
   height: 100vh;
@@ -214,12 +223,14 @@ h1 {
   border-radius: 1em;
   margin: 1em;
   padding: 2em;
+  height: 100%;
 }
 #como #content #cards #itens .card h1 {
   margin: 0.5em 0 0;
 }
 #como #content #cards #itens .card span {
   margin: 1em 0 2em;
+  flex-grow: 1;
 }
 #como #content #cards #itens .card img {
   width: 50px;
@@ -276,6 +287,7 @@ h1 {
   margin: 0 1em;
 }
 #porque #cards #itens .card {
+  height: 100%;
   flex-direction: column;
   background: #04098b;
   border-radius: 0.5em;
@@ -283,11 +295,16 @@ h1 {
   max-width: 90vw;
   overflow: hidden;
   color: #f5f5f5;
+  transition: 0.25s;
+}
+#porque #cards #itens .card:hover {
+  transform: scale(1.05);
 }
 #porque #cards #itens .card h1 {
   margin: 0.5em 1em;
   font-weight: 500;
   font-size: 1.25em;
+  flex-grow: 1;
 }
 @media screen and (max-width: 500px) {
   #porque #cards #itens .card h1 {
@@ -390,6 +407,7 @@ h1 {
 #conheca {
   flex-direction: column;
   padding: 2em;
+  min-height: fit-content;
 }
 #conheca h1 {
   color: #f26524;
@@ -401,10 +419,15 @@ h1 {
   height: 60vh;
 }
 
+#relatos h1 {
+  color: #f26524;
+}
 #relatos #pattern_separator {
   background: url("../images/pattern-azul.svg") 0 0/auto 50% repeat;
   width: 100%;
-  height: 200px;
+  height: 100px;
+  opacity: 0.7;
+  margin-bottom: 4em;
 }
 @media screen and (max-width: 700px) {
   #relatos #pattern_separator {
@@ -458,7 +481,7 @@ h1 {
 }
 
 #comecar {
-  background: url("../images/pattern-cinza.svg") 0 0/auto 100px repeat, #f26524;
+  background: url("../images/pattern-cinza.svg") 0 0/auto 50px repeat, #f26524;
   flex-direction: column;
 }
 #comecar > h1 {
@@ -497,6 +520,14 @@ h1 {
 }
 #comecar #planos .plano h1 {
   font-size: 2.5em;
+  text-align: center;
+  height: 2em;
+  flex-direction: column;
+  justify-content: center;
+}
+#comecar #planos .plano h1 small {
+  font-size: 0.5em;
+  line-height: 1em;
 }
 #comecar #planos .plano ul {
   flex-direction: column;
@@ -519,11 +550,19 @@ h1 {
 #comecar #planos .plano ul li.disabled::before {
   content: url("../images/fa-times-circle.svg");
 }
+#comecar #planos .plano:nth-child(1) #button a {
+  font-size: 0.8em;
+}
+#comecar #planos .plano:nth-child(2) #button a {
+  animation-name: pulse;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
 #comecar #button {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2em;
+  margin-top: 2em;
   font-size: 1.5em;
 }
 #comecar #button a {
@@ -532,10 +571,34 @@ h1 {
   color: #f5f5f5;
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.02);
+  }
+  25% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.02);
+  }
+  35% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 #perguntas {
   font-size: 16pt;
   background: #f5f5f5;
   padding: 1em;
+  min-height: min-content;
 }
 #perguntas h1 {
   color: #04098b;

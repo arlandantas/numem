@@ -1,9 +1,24 @@
+/**
+#como
+Impedir quebra de linha
+Alinhar ícones abaixo
+Setas apenas outline
+
+#porque
+Alinhar logo
+
+#relatos
+Espaços do pattern
+Diminuir opacidade do background
+*/
+
 $blue: #04098b;
 $orange: #f26524;
 $cinza_escuro: #3a3a3a;
 $cinza_claro: #f5f5f5;
 
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,800;1,400;1,800&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,800;1,400;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,800;1,400;1,800&display=swap');
 
 html, body {
     margin: 0;
@@ -11,7 +26,7 @@ html, body {
     color: $cinza_escuro;
 }
 * {
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
     &:not(html, document, header, body, meta, title, link, script, style, .glider-track) {
         display: flex;
@@ -23,11 +38,13 @@ nav#fix_header {
     flex-direction: row;
     justify-content: space-between;
     width: 100vw;
-    padding: 1em 2em 2em;
-    transition: background 1s;
+    padding: 1em 2em;
+    transition: background .25s;
     z-index: 1000;
     &.scrolled {
-        background: linear-gradient(180deg, $blue 0%, $blue 80%, #0080 100%);
+        background: #04098b;
+        // background: linear-gradient(180deg, $blue 0%, $blue 100%);
+        // background: linear-gradient(180deg, $blue 0%, $blue 80%, #0080 100%);
     }
     #links {
         flex-direction: row;
@@ -101,10 +118,12 @@ h1 {
         width: 100%;
         height: calc(100% + 50vh);
         z-index: -1;
-        background:
-            radial-gradient(circle, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 25%, rgba(255,255,255,0) 50%) 20vw 50vh/500px 500px no-repeat,
-            radial-gradient(circle, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 25%, rgba(255,255,255,0) 50%) 60vw 0vh/800px 800px no-repeat,
-            $blue;
+        background: url('../images/grandientefundo.png');
+        background-size: cover;
+        // background:
+        //     radial-gradient(circle, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 25%, rgba(255,255,255,0) 50%) 20vw 50vh/500px 500px no-repeat,
+        //     radial-gradient(circle, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 25%, rgba(255,255,255,0) 50%) 60vw 0vh/800px 800px no-repeat,
+        //     $blue;
     }
     #text {
         color: $cinza_claro;
@@ -136,6 +155,7 @@ h1 {
             font-size: .8em;
             width: max-content;
             border-radius: .5em;
+            box-shadow: $orange 0px 0px 10px 5px;
         }
     }
     #smiling {
@@ -144,16 +164,16 @@ h1 {
         min-height: 100%;
         z-index: -1;
         filter: opacity(.2);
-        width: 30vw;
+        // width: 30vw;
         overflow: hidden;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        left: 60vw;
-        @media screen and (max-width: 700px) {
-            left: 10vw;
-            width: 80vw;
-        }
+        right: 0;
+        // @media screen and (max-width: 700px) {
+        //     left: 0;
+        //     // width: 80vw;
+        // }
         img {
             height: 100vh;
             width: auto;
@@ -201,11 +221,13 @@ h1 {
                     border-radius: 1em;
                     margin: 1em;
                     padding: 2em;
+                    height: 100%;
                     h1 {
                         margin: .5em 0 0;
                     }
                     span {
                         margin: 1em 0 2em;
+                        flex-grow: 1;
                     }
                     img {
                         width: 50px;
@@ -262,6 +284,7 @@ h1 {
             align-items: flex-start;
             margin: 0 1em;
             .card {
+                height: 100%;
                 flex-direction: column;
                 background: $blue;
                 border-radius: .5em;
@@ -269,10 +292,15 @@ h1 {
                 max-width: 90vw;
                 overflow: hidden;
                 color: $cinza_claro;
+                transition: .25s;
+                &:hover {
+                    transform: scale(1.05);
+                }
                 h1 {
                     margin: .5em 1em;
                     font-weight: 500;
                     font-size: 1.25em;
+                    flex-grow: 1;
                     @media screen and (max-width: 500px) {
                         font-size: 1em;
                     }
@@ -367,6 +395,7 @@ h1 {
 #conheca {
     flex-direction: column;
     padding: 2em;
+    min-height: fit-content;
     h1 {
         color: $orange;
         font-size: 2em;
@@ -379,10 +408,15 @@ h1 {
 }
 
 #relatos {
+    h1 {
+        color: $orange;
+    }
     #pattern_separator {
         background: url("../images/pattern-azul.svg") 0 0 / auto 50% repeat;
         width: 100%;
-        height: 200px;
+        height: 100px;
+        opacity: .7;
+        margin-bottom: 4em;
         @media screen and (max-width: 700px) {
             height: 100px;
         }
@@ -435,7 +469,7 @@ h1 {
 }
 
 #comecar {
-    background: url("../images/pattern-cinza.svg") 0 0 / auto 100px repeat, $orange;
+    background: url("../images/pattern-cinza.svg") 0 0 / auto 50px repeat, $orange;
     flex-direction: column;
     & > h1 {
         color: $cinza_claro;
@@ -471,6 +505,14 @@ h1 {
             }
             h1 {
                 font-size: 2.5em;
+                text-align: center;
+                height: 2em;
+                flex-direction: column;
+                justify-content: center;
+                small {
+                    font-size: .5em;
+                    line-height: 1em;
+                }
             }
             ul {
                 flex-direction: column;
@@ -495,13 +537,25 @@ h1 {
                     }
                 }
             }
+            &:nth-child(1) {
+                #button a {
+                    font-size: .8em;
+                }
+            }
+            &:nth-child(2) {
+                #button a {
+                    animation-name: pulse;
+                    animation-duration: 2s;
+                    animation-iteration-count: infinite;
+                }
+            }
         }
     }
     #button {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin-bottom: 2em;
+        margin-top: 2em;
         font-size: 1.5em;
         a {
             padding: 1em 2em;
@@ -511,10 +565,21 @@ h1 {
     }
 }
 
+@keyframes pulse {
+   0%   {transform: scale(1);}
+   15%  {transform: scale(1);}
+   20%  {transform: scale(1.02);}
+   25%  {transform: scale(1);}
+   30%  {transform: scale(1.02);}
+   35%  {transform: scale(1);}
+   100% {transform: scale(1);}
+}
+
 #perguntas {
     font-size: 16pt;
     background: $cinza_claro;
     padding: 1em;
+    min-height: min-content;
     h1 {
         color: $blue;
         font-size: 2em;
