@@ -110,7 +110,7 @@ h1 {
     font-size: 16pt;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   #home {
     justify-content: flex-end;
   }
@@ -141,7 +141,7 @@ h1 {
     margin-left: 3em;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   #home #text {
     width: 80vw;
     margin-left: 1em;
@@ -177,6 +177,24 @@ h1 {
 #home #smiling img {
   height: 100vh;
   width: auto;
+}
+#home #smiling img:nth-child(2) {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  #home #smiling {
+    left: 0;
+  }
+  #home #smiling img {
+    width: auto;
+    height: 100vh;
+  }
+  #home #smiling img:nth-child(1) {
+    display: none;
+  }
+  #home #smiling img:nth-child(2) {
+    display: flex;
+  }
 }
 
 #como {
