@@ -624,6 +624,16 @@ h1 {
             }
             .conteudo {
                 padding: 0 1em 1em;
+                p {
+                    margin: 0;
+                    &:not(:first-child) {
+                        margin-top: .5em;
+                    }
+                    a, b {
+                        text-transform: none;
+                        display: contents;
+                    }
+                }
             }
         }
     }

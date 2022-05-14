@@ -651,6 +651,16 @@ h1 {
 #perguntas #lista .pergunta .conteudo {
   padding: 0 1em 1em;
 }
+#perguntas #lista .pergunta .conteudo p {
+  margin: 0;
+}
+#perguntas #lista .pergunta .conteudo p:not(:first-child) {
+  margin-top: 0.5em;
+}
+#perguntas #lista .pergunta .conteudo p a, #perguntas #lista .pergunta .conteudo p b {
+  text-transform: none;
+  display: contents;
+}
 
 #inscricao_email {
   min-height: 300px;
