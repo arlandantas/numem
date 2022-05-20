@@ -124,8 +124,8 @@ h1 {
     flex-direction: column;
     align-items: flex-start;
 
-    @media screen and (max-width: 1000px) {
-        font-size: 16pt;
+    @media screen and (max-height: 800px) and (max-width: 1500px) {
+        font-size: 14pt;
     }
 
     @media screen and (max-width: 800px) {
@@ -229,6 +229,35 @@ h1 {
     }
 }
 
+.carrossel {
+    flex-direction: row;
+    align-items: center;
+    padding: 0 14pt;
+    .botao {
+        flex-grow: 0;
+        flex-shrink: 0;
+        font-size: 1.5em;
+        cursor: pointer;
+        color: $orange;
+        width: 30px;
+        height: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        &.disabled {
+            color: $cinza_claro;
+            cursor: default;
+            opacity: .2;
+        }
+        &.proximo {
+            background-image: url('../images/fa-chevron-right.svg');
+        }
+        &.anterior {
+            background-image: url('../images/fa-chevron-left.svg');
+        }
+    }
+}
+
 #como {
     position: relative;
 
@@ -249,28 +278,11 @@ h1 {
         }
 
         #cards {
-            flex-direction: row;
             width: 1300px;
             max-width: 100vw;
-            align-items: center;
-            padding: 0 2em;
-
-            .botao {
-                flex-grow: 0;
-                font-size: 1.5em;
-                cursor: pointer;
-                color: $orange;
-
-                &.disabled {
-                    color: $cinza_claro;
-                    cursor: default;
-                }
-            }
-
             #itens {
                 flex-grow: 1;
                 text-align: left;
-
                 .card {
                     flex-direction: column;
                     background: $orange;
@@ -328,23 +340,7 @@ h1 {
     }
 
     #cards {
-        flex-direction: row;
         max-width: 100vw;
-        align-items: center;
-        padding: 0 2em;
-
-        .botao {
-            flex-grow: 0;
-            font-size: 1.5em;
-            cursor: pointer;
-            color: $orange;
-
-            &.disabled {
-                color: $cinza_claro;
-                cursor: default;
-            }
-        }
-
         #itens {
             flex-grow: 1;
             text-align: left;
@@ -517,23 +513,7 @@ h1 {
     }
 
     #list {
-        flex-direction: row;
         max-width: 100%;
-        align-items: center;
-        padding: 0 2em;
-
-        .botao {
-            flex-grow: 0;
-            font-size: 1.5em;
-            cursor: pointer;
-            color: $orange;
-
-            &.disabled {
-                color: $cinza_claro;
-                cursor: default;
-            }
-        }
-
         #itens {
             flex-grow: 1;
             flex-direction: row;
@@ -848,7 +828,13 @@ h1 {
             color: #f5f5f5 !important;
             padding: 1em 2em;
             width: max-content;
-            margin: auto;
+            align-self: flex-end;
+            margin-left: 10px;
+            @media screen and (max-width: 500px) {
+                margin-top: 10px;
+                align-self: center;
+                margin-left: 0;
+            }
         }
     
         ._close-icon {
@@ -926,9 +912,14 @@ h1 {
             background-image: url("https://d226aj4ao1t61q.cloudfront.net/jftq2c8s_aclogo_dk.png");
         }
     
+        ._form-content {
+            @media screen and (min-width: 500px) {
+                flex-direction: row;
+            }
+        }
+    
         ._form_element {
             position: relative;
-            margin-bottom: 10px;
             font-size: 0;
             max-width: 100%;
         }
@@ -1204,11 +1195,6 @@ h1 {
                 font-size: 1em;
                 margin: 0 0.3em 0 0;
                 vertical-align: baseline;
-            }
-    
-            button[type="submit"] {
-                padding: 20px;
-                font-size: 1.5em;
             }
     
             ._inline-style {
