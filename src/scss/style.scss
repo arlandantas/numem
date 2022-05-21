@@ -541,6 +541,10 @@
                     animation-iteration-count: infinite;
                 }
             }
+
+            @media screen and (max-width: 500px) {
+                font-size: 10pt;
+            }
         }
     }
 
