@@ -5,15 +5,29 @@
   width: 900px;
   max-width: 100%;
   margin: 0 auto 3em;
-  text-align: justify;
   line-height: 1.5em;
+}
+#content > ol {
+  margin-left: -1em;
 }
 #content > ol > li {
   font-weight: bold;
+  font-size: 1.2em;
+}
+#content.privacidade > ol > ol > li {
+  font-weight: bold;
+}
+#content a {
+  display: contents;
+  text-transform: none;
 }
 
 li {
   display: list-item !important;
+  margin: 0.5em 0;
+}
+
+p {
   margin: 0.5em 0;
 }
 

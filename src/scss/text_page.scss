@@ -7,16 +7,35 @@
     width: 900px;
     max-width: 100%;
     margin: 0 auto 3em;
-    text-align: justify;
+    // text-align: justify;
     line-height: 1.5em;
     & > ol {
+        margin-left: -1em;
+        @media screen and (max-width: 800px) {
+        }
         & > li {
             font-weight: bold;
+            font-size: 1.2em;
         }
+    }
+    &.privacidade {
+        & > ol > ol {
+            & > li {
+                font-weight: bold;
+            }
+        }
+    }
+    a {
+        display: contents;
+        text-transform: none;
     }
 }
 
 li {
     display: list-item !important;
+    margin: .5em 0;
+}
+
+p {
     margin: .5em 0;
 }
