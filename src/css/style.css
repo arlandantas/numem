@@ -23,12 +23,17 @@
     justify-content: flex-end;
   }
 }
+@media screen and (max-width: 500px) {
+  #home {
+    font-size: 14pt;
+  }
+}
 #home #bkg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: calc(100% + 50vh);
+  height: 150%;
   z-index: -1;
   background: url("../images/grandientefundo.png");
   background-size: cover;

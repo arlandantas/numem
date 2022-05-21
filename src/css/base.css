@@ -53,6 +53,11 @@ nav#fix_header #links a {
   border-radius: 0.5em;
   text-transform: uppercase;
 }
+@media screen and (max-width: 500px) {
+  nav#fix_header #links a {
+    font-size: 8pt;
+  }
+}
 nav#fix_header #links a.highlight {
   background: #f26524;
 }
