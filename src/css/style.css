@@ -486,7 +486,7 @@
   animation-duration: 2s;
   animation-iteration-count: infinite;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   #comecar #planos .plano {
     font-size: 10pt;
   }
