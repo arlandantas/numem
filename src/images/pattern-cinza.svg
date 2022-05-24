@@ -7,8 +7,31 @@
    viewBox="0 0 50 50"
    version="1.1"
    id="svg1410"
+   sodipodi:docname="pattern-cinza.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview17"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="3.4078333"
+     inkscape:cx="42.402308"
+     inkscape:cy="94.63491"
+     inkscape:window-width="2512"
+     inkscape:window-height="1019"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
   <defs
      id="defs1407" />
   <g
@@ -16,7 +39,7 @@
     <g
        id="g506"
        transform="matrix(0.65884463,0,0,0.65883958,-626.48203,-477.61933)"
-       style="stroke:#f5f5f5;stroke-opacity:1;stroke-width:0.30356287;stroke-miterlimit:4;stroke-dasharray:none">
+       style="stroke:#f5f5f5;stroke-opacity:1;stroke-width:0.30356287;stroke-miterlimit:4;stroke-dasharray:none;opacity:0.40711871">
       <g
          id="g504"
          style="stroke:#f5f5f5;stroke-opacity:1;stroke-width:0.30356287;stroke-miterlimit:4;stroke-dasharray:none">

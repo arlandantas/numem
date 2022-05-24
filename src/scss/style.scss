@@ -45,7 +45,7 @@
         margin: 0 1em 0 2em;
         width: fit-content;
         margin-bottom: 1em;
-        width: 50vw;
+        width: 40vw;
         max-width: 500px;
 
         @media screen and (min-width: 1000px) {
@@ -73,7 +73,6 @@
             font-size: .8em;
             width: max-content;
             border-radius: .5em;
-            box-shadow: $orange 0px 0px 10px 5px;
         }
     }
 
@@ -368,14 +367,16 @@
 }
 
 #conheca {
+    background-color: $cinza_claro;
     flex-direction: column;
-    padding: 2em;
+    padding: 4em 2em;
     min-height: fit-content;
 
     h1 {
         color: $orange;
         font-size: 2em;
         text-align: center;
+        margin-top: 0;
     }
 
     iframe {
@@ -385,6 +386,8 @@
 }
 
 #relatos {
+    min-height: fit-content;
+    padding: 4em 0;
     h1 {
         color: $orange;
         margin: .5em 2em;
@@ -392,6 +395,7 @@
     }
 
     #pattern_separator {
+        display: none;
         background: url("../images/pattern-azul.svg") 0 0 / auto 50% repeat;
         width: 100%;
         height: 100px;
@@ -405,6 +409,7 @@
 
     #list {
         max-width: 100%;
+        width: 800px;
         #itens {
             flex-grow: 1;
             flex-direction: row;
@@ -417,6 +422,7 @@
                 margin: 1em;
                 color: $cinza_escuro;
                 flex-shrink: 0;
+                text-align: center;
 
                 .img {
                     width: 150px;
@@ -498,6 +504,10 @@
                 small {
                     font-size: .5em;
                     line-height: 1em;
+                    font-weight: normal;
+                    b {
+                        display: contents;
+                    }
                 }
             }
 
@@ -518,6 +528,7 @@
                         margin: 0 1em 0 0;
                         width: 1em;
                         height: 1em;
+                        flex-shrink: 0;
                     }
 
                     &.disabled {

@@ -1,3 +1,7 @@
+h1 {
+  color: #f26524;
+}
+
 #content {
   padding: 0 2em;
   padding-top: calc(4em + 50px);
@@ -12,6 +16,7 @@
 }
 #content > ol > li {
   font-weight: bold;
+  color: #04098b;
   font-size: 1.2em;
 }
 #content.privacidade > ol > ol > li {

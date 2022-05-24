@@ -16,26 +16,26 @@ new Glider(document.querySelector("#relatos #itens"), {
         prev: "#relato_ant",
         next: "#relato_seg",
     },
-    responsive: [
-        {
-            breakpoint: 775,
-            settings: {
-                slidesToShow: 2,
-            },
-        },
-        {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 3,
-            },
-        },
-        {
-            breakpoint: 1300,
-            settings: {
-                slidesToShow: 4,
-            },
-        },
-    ],
+    // responsive: [
+    //     {
+    //         breakpoint: 775,
+    //         settings: {
+    //             slidesToShow: 2,
+    //         },
+    //     },
+    //     {
+    //         breakpoint: 1024,
+    //         settings: {
+    //             slidesToShow: 3,
+    //         },
+    //     },
+    //     {
+    //         breakpoint: 1300,
+    //         settings: {
+    //             slidesToShow: 4,
+    //         },
+    //     },
+    // ],
 });
 
 new Glider(document.querySelector("#porque #itens"), {

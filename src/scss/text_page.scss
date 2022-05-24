@@ -1,5 +1,9 @@
 @import './colors';
 
+h1 {
+    color: $orange;
+}
+
 #content {
     padding: 0 2em;
     padding-top: calc(4em + 50px);
@@ -7,7 +11,6 @@
     width: 900px;
     max-width: 100%;
     margin: 0 auto 3em;
-    // text-align: justify;
     line-height: 1.5em;
     & > ol {
         margin-left: -1em;
@@ -15,6 +18,7 @@
         }
         & > li {
             font-weight: bold;
+            color: $blue;
             font-size: 1.2em;
         }
     }
