@@ -2,6 +2,33 @@ h1 {
   color: #f26524;
 }
 
+ol, ul {
+  padding-left: 0;
+}
+
+ol:not([type=a]) {
+  counter-reset: item;
+  font-weight: normal;
+  color: #3a3a3a;
+}
+ol:not([type=a]) > li {
+  list-style: none;
+}
+ol:not([type=a]) > li:before {
+  display: contents;
+  content: counters(item, ".") ". ";
+  counter-increment: item;
+}
+ol:not([type=a]) > li.bold_counter:before {
+  font-weight: bold;
+}
+ol:not([type=a]) > li.bold {
+  font-weight: bold;
+}
+ol:not([type=a]) > li b {
+  display: contents !important;
+}
+
 #content {
   padding: 0 2em;
   padding-top: calc(4em + 50px);
@@ -11,10 +38,8 @@ h1 {
   margin: 0 auto 3em;
   line-height: 1.5em;
 }
-#content > ol {
-  margin-left: -1em;
-}
-#content > ol > li {
+#content > ol > li .item_title, #content > ol > li::before {
+  display: inline;
   font-weight: bold;
   color: #04098b;
   font-size: 1.2em;
@@ -28,6 +53,7 @@ h1 {
 }
 
 li {
+  list-style-position: inside;
   display: list-item !important;
   margin: 0.5em 0;
 }

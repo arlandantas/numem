@@ -4,6 +4,33 @@ h1 {
     color: $orange;
 }
 
+ol, ul {
+    padding-left: 0;
+}
+
+ol:not([type="a"]) {
+    counter-reset: item;
+    font-weight: normal;
+    color: $cinza_escuro;
+    & > li {
+        list-style: none;
+        &:before {
+            display: contents;
+            content: counters(item, '.') '. ';
+            counter-increment: item;
+        }
+        &.bold_counter:before {
+            font-weight: bold;
+        }
+        &.bold {
+            font-weight: bold;
+        }
+        b {
+            display: contents !important;
+        }
+    }
+}
+
 #content {
     padding: 0 2em;
     padding-top: calc(4em + 50px);
@@ -13,13 +40,15 @@ h1 {
     margin: 0 auto 3em;
     line-height: 1.5em;
     & > ol {
-        margin-left: -1em;
         @media screen and (max-width: 800px) {
         }
         & > li {
-            font-weight: bold;
-            color: $blue;
-            font-size: 1.2em;
+            .item_title, &::before {
+                display: inline;
+                font-weight: bold;
+                color: $blue;
+                font-size: 1.2em;
+            }
         }
     }
     &.privacidade {
@@ -36,6 +65,7 @@ h1 {
 }
 
 li {
+    list-style-position: inside;
     display: list-item !important;
     margin: .5em 0;
 }
