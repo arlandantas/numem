@@ -8,7 +8,7 @@ body {
     color: $cinza_escuro;
 }
 
-* {
+*:not(.adopt-card, .adopt-card *, .adopt-panel, .adopt-panel *) {
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
 
