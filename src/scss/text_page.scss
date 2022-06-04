@@ -14,10 +14,10 @@ ol:not([type="a"]) {
     color: $cinza_escuro;
     & > li {
         list-style: none;
+        counter-increment: item;
         &:before {
             display: contents;
             content: counters(item, '.') '. ';
-            counter-increment: item;
         }
         &.bold_counter:before {
             font-weight: bold;

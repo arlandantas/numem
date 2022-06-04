@@ -13,11 +13,11 @@ ol:not([type=a]) {
 }
 ol:not([type=a]) > li {
   list-style: none;
+  counter-increment: item;
 }
 ol:not([type=a]) > li:before {
   display: contents;
   content: counters(item, ".") ". ";
-  counter-increment: item;
 }
 ol:not([type=a]) > li.bold_counter:before {
   font-weight: bold;

@@ -6,11 +6,11 @@ body {
   color: #3a3a3a;
 }
 
-*:not(.adopt-card, .adopt-card *, .adopt-panel, .adopt-panel *) {
+* {
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
 }
-*:not(.adopt-card, .adopt-card *, .adopt-panel, .adopt-panel *):not(html, document, header, body, meta, title, link, script, style, .glider-track) {
+*:not(html, document, header, body, meta, title, link, script, style, .glider-track, .adopt-card, .adopt-card *, .adopt-panel, .adopt-panel *) {
   display: flex;
   flex-direction: column;
 }
