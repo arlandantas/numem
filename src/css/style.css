@@ -337,6 +337,59 @@
   color: #f5f5f5;
 }
 
+#professor {
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  column-gap: 2em;
+  row-gap: 3em;
+  font-size: 16pt;
+  padding: 0 2em;
+  align-content: center;
+}
+#professor h1 {
+  color: #04098b;
+  font-size: 2em;
+  margin: 0 0 0.5em;
+}
+@media screen and (max-width: 700px) {
+  #professor {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+  }
+}
+#professor #img {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+#professor #img img {
+  width: 500px;
+  max-width: 40vw;
+}
+@media screen and (max-width: 700px) {
+  #professor #img img {
+    max-width: 90vw;
+  }
+}
+@media screen and (max-width: 700px) {
+  #professor #img {
+    margin-top: 2em;
+  }
+}
+#professor #text {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  flex-direction: column;
+  max-width: 500px;
+}
+@media screen and (max-width: 700px) {
+  #professor #text {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+}
+
 #conheca {
   background-color: #f5f5f5;
   flex-direction: column;
