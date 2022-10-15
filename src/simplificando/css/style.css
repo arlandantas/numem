@@ -18,11 +18,6 @@
     font-size: 14pt;
   }
 }
-@media screen and (max-width: 800px) {
-  #home {
-    justify-content: flex-end;
-  }
-}
 @media screen and (max-width: 500px) {
   #home {
     font-size: 14pt;
