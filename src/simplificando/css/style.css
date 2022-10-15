@@ -33,9 +33,14 @@
   top: 0;
   left: 0;
   width: 100%;
+  height: 100vh;
   z-index: -1;
-  background: url("../images/novo13.webp");
-  background-size: cover;
+  background: linear-gradient(#fdfdfd, #f4f2f0, #f4f2f0);
+}
+@media screen and (max-width: 800px) {
+  #home #bkg {
+    background: white;
+  }
 }
 #home #text {
   color: #82542d;
@@ -73,6 +78,9 @@
   width: max-content;
   border-radius: 0.5em;
 }
+#home #text img {
+  max-width: 400px;
+}
 #home #smiling {
   position: absolute;
   bottom: 0;
@@ -88,12 +96,16 @@
   height: 100vh;
   width: auto;
 }
-#home #smiling img:nth-child(2) {
-  display: none;
-}
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
   #home #smiling {
-    left: 0;
+    right: -50vw;
+    opacity: 0.5;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 800px) {
+  #home #smiling {
+    right: -25vw;
+    opacity: 0.5;
   }
   #home #smiling img {
     width: auto;
@@ -283,8 +295,12 @@
   color: white;
 }
 #programa #lista .pergunta .conteudo ul {
-  margin: 0;
+  margin: 0 0 0 1em;
   padding: 0;
+}
+#programa #lista .pergunta .conteudo ul li {
+  display: list-item;
+  list-style: disc;
 }
 #programa #lista .pergunta .conteudo p {
   margin: 0;
@@ -369,14 +385,6 @@
   font-size: 2em;
   margin: 2em 0;
   flex-direction: row;
-}
-#comecar > h1::after, #comecar > h1::before {
-  content: "";
-  background-image: url("../images/logo-azul-branco.svg");
-  background-size: contain;
-  margin: auto 1em;
-  width: 1em;
-  height: 1em;
 }
 #comecar #planos {
   flex-direction: row;
@@ -533,437 +541,6 @@
 #perguntas #lista .pergunta .conteudo p b {
   text-transform: none;
   display: contents;
-}
-
-#inscricao_email {
-  min-height: 300px;
-  padding: 2em;
-  text-align: center;
-}
-#inscricao_email h1 {
-  color: #30734b;
-}
-#inscricao_email form {
-  width: 100%;
-  align-items: center;
-  /* {
-      font-size: 14px;
-      line-height: 1.6;
-      font-family: arial, helvetica, sans-serif;
-      margin: 0;
-  }
-  * {
-      outline: 0;
-  } */
-}
-#inscricao_email form._form-top {
-  top: 0;
-}
-#inscricao_email form._form-bottom {
-  bottom: 0;
-}
-#inscricao_email form._form-left {
-  left: 0;
-}
-#inscricao_email form._form-right {
-  right: 0;
-}
-#inscricao_email form input[type=text],
-#inscricao_email form input[type=date],
-#inscricao_email form textarea {
-  padding: 1em;
-  border: #979797 1px solid;
-  border-radius: 4px;
-  color: #000 !important;
-  font-size: 14px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-#inscricao_email form textarea {
-  resize: none;
-}
-#inscricao_email form ._submit {
-  -webkit-appearance: none;
-  cursor: pointer;
-  font-family: arial, sans-serif;
-  font-size: 14px;
-  text-align: center;
-  background: #f26524 !important;
-  border: 3px solid #030303 !important;
-  -moz-border-radius: 5px !important;
-  -webkit-border-radius: 5px !important;
-  border-radius: 5px !important;
-  color: #f5f5f5 !important;
-  padding: 1em 2em;
-  width: max-content;
-  align-self: flex-end;
-  margin-left: 10px;
-}
-@media screen and (max-width: 500px) {
-  #inscricao_email form ._submit {
-    margin-top: 10px;
-    align-self: center;
-    margin-left: 0;
-  }
-}
-#inscricao_email form ._close-icon {
-  cursor: pointer;
-  background-image: url("https://d226aj4ao1t61q.cloudfront.net/esfkyjh1u_forms-close-dark.png");
-  background-repeat: no-repeat;
-  background-size: 14.2px 14.2px;
-  position: absolute;
-  display: block;
-  top: 11px;
-  right: 9px;
-  overflow: hidden;
-  width: 16.2px;
-  height: 16.2px;
-}
-#inscricao_email form ._close-icon:before {
-  position: relative;
-}
-#inscricao_email form ._form-body {
-  margin-bottom: 30px;
-}
-#inscricao_email form ._form-image-left {
-  width: 150px;
-  float: left;
-}
-#inscricao_email form ._form-content-right {
-  margin-left: 164px;
-}
-#inscricao_email form ._form-branding {
-  color: #fff;
-  font-size: 10px;
-  clear: both;
-  text-align: left;
-  margin-top: 30px;
-  font-weight: 100;
-}
-#inscricao_email form ._form-branding ._logo {
-  display: block;
-  width: 130px;
-  height: 14px;
-  margin-top: 6px;
-  background-image: url("https://d226aj4ao1t61q.cloudfront.net/hh9ujqgv5_aclogo_li.png");
-  background-size: 130px auto;
-  background-repeat: no-repeat;
-}
-#inscricao_email form .form-sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-#inscricao_email form .form-label, #inscricao_email form ._form_element ._form-label {
-  font-weight: bold;
-  margin-bottom: 5px;
-  display: block;
-}
-#inscricao_email form._dark ._form-branding {
-  color: #333;
-}
-#inscricao_email form._dark ._form-branding ._logo {
-  background-image: url("https://d226aj4ao1t61q.cloudfront.net/jftq2c8s_aclogo_dk.png");
-}
-@media screen and (min-width: 500px) {
-  #inscricao_email form ._form-content {
-    flex-direction: row;
-  }
-}
-#inscricao_email form ._form_element {
-  position: relative;
-  font-size: 0;
-  max-width: 100%;
-}
-#inscricao_email form ._form_element * {
-  font-size: 14px;
-}
-#inscricao_email form ._form_element._clear {
-  clear: both;
-  width: 100%;
-  float: none;
-}
-#inscricao_email form ._form_element._clear:after {
-  clear: left;
-}
-#inscricao_email form .form_element input[type=text],
-#inscricao_email form #_form_3 .form_element input[type=date],
-#inscricao_email form #_form_3 .form_element select,
-#inscricao_email form #_form_3 ._form_element textarea:not(.g-recaptcha-response) {
-  display: block;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  font-family: inherit;
-}
-#inscricao_email form ._field-wrapper {
-  position: relative;
-}
-#inscricao_email form ._inline-style {
-  float: left;
-}
-#inscricao_email form ._inline-style:not(._clear) + ._inline-style:not(._clear) {
-  margin-left: 20px;
-}
-#inscricao_email form ._form_element img._form-image {
-  max-width: 100%;
-}
-#inscricao_email form ._form_element ._form-fieldset {
-  border: 0;
-  padding: 0.01em 0 0 0;
-  margin: 0;
-  min-width: 0;
-}
-#inscricao_email form ._clear-element {
-  clear: left;
-}
-#inscricao_email form ._full_width {
-  width: 100%;
-}
-#inscricao_email form ._form_full_field {
-  display: block;
-  width: 100%;
-  margin-bottom: 10px;
-}
-#inscricao_email form input[type=text].has_error,
-#inscricao_email form #_form_3 textarea._has_error {
-  border: #f37c7b 1px solid;
-}
-#inscricao_email form input[type=checkbox]._has_error {
-  outline: #f37c7b 1px solid;
-}
-#inscricao_email form ._error {
-  display: block;
-  position: absolute;
-  font-size: 14px;
-  z-index: 10000001;
-}
-#inscricao_email form ._error._above {
-  padding-bottom: 4px;
-  bottom: 39px;
-  right: 0;
-}
-#inscricao_email form ._error._below {
-  padding-top: 4px;
-  top: 100%;
-  right: 0;
-}
-#inscricao_email form ._error._above ._error-arrow {
-  bottom: 0;
-  right: 15px;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid #f37c7b;
-}
-#inscricao_email form ._error._below ._error-arrow {
-  top: 0;
-  right: 15px;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid #f37c7b;
-}
-#inscricao_email form ._error-inner {
-  padding: 8px 12px;
-  background-color: #f37c7b;
-  font-size: 14px;
-  font-family: arial, sans-serif;
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-}
-#inscricao_email form ._error-inner._form_error {
-  margin-bottom: 5px;
-  text-align: left;
-}
-#inscricao_email form ._button-wrapper ._error-inner._form_error {
-  position: static;
-}
-#inscricao_email form ._error-inner._no_arrow {
-  margin-bottom: 10px;
-}
-#inscricao_email form ._error-arrow {
-  position: absolute;
-  width: 0;
-  height: 0;
-}
-#inscricao_email form ._error-html {
-  margin-bottom: 10px;
-}
-#inscricao_email form .pika-single {
-  z-index: 10000001 !important;
-}
-#inscricao_email form input[type=text].datetime_date {
-  width: 69%;
-  display: inline;
-}
-#inscricao_email form select.datetime_time {
-  width: 29%;
-  display: inline;
-  height: 32px;
-}
-#inscricao_email form input[type=date].datetime_date {
-  width: 69%;
-  display: inline-flex;
-}
-#inscricao_email form input[type=time].datetime_time {
-  width: 29%;
-  display: inline-flex;
-}
-@media all and (min-width: 320px) and (max-width: 667px) {
-  #inscricao_email form {
-    margin: 0;
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-  #inscricao_email form ::-webkit-scrollbar {
-    display: none;
-  }
-  #inscricao_email form * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    font-size: 1em;
-  }
-  #inscricao_email form ._form-content {
-    margin: 0;
-    width: 100%;
-  }
-  #inscricao_email form ._form-inner {
-    display: block;
-    min-width: 100%;
-  }
-  #inscricao_email form .form-title, #inscricao_email form ._inline-style {
-    margin-top: 0;
-    margin-right: 0;
-    margin-left: 0;
-  }
-  #inscricao_email form ._form-title {
-    font-size: 1.2em;
-  }
-  #inscricao_email form ._form_element {
-    margin: 0 0 20px;
-    padding: 0;
-    width: 100%;
-  }
-  #inscricao_email form .form-element,
-#inscricao_email form #_form_3 .inline-style,
-#inscricao_email form #_form_3 input[type=text],
-#inscricao_email form label,
-#inscricao_email form p,
-#inscricao_email form textarea:not(.g-recaptcha-response) {
-    float: none;
-    display: block;
-    width: 100%;
-  }
-  #inscricao_email form ._row._checkbox-radio label {
-    display: inline;
-  }
-  #inscricao_email form .row,
-#inscricao_email form #_form_3 p,
-#inscricao_email form label {
-    margin-bottom: 0.7em;
-    width: 100%;
-  }
-  #inscricao_email form .row input[type=checkbox],
-#inscricao_email form #_form_3 ._row input[type=radio] {
-    margin: 0 !important;
-    vertical-align: middle !important;
-  }
-  #inscricao_email form ._row input[type=checkbox] + span label {
-    display: inline;
-  }
-  #inscricao_email form ._row span label {
-    margin: 0 !important;
-    width: initial !important;
-    vertical-align: middle !important;
-  }
-  #inscricao_email form ._form-image {
-    max-width: 100%;
-    height: auto !important;
-  }
-  #inscricao_email form input[type=text] {
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 16px;
-    line-height: 1.3em;
-    -webkit-appearance: none;
-  }
-  #inscricao_email form input[type=radio],
-#inscricao_email form input[type=checkbox] {
-    display: inline-block;
-    width: 1.3em;
-    height: 1.3em;
-    font-size: 1em;
-    margin: 0 0.3em 0 0;
-    vertical-align: baseline;
-  }
-  #inscricao_email form ._inline-style {
-    margin: 20px 0 0 !important;
-  }
-}
-#inscricao_email form.inline-form,
-#inscricao_email form #_form_3.inline-form ._form-content,
-#inscricao_email form #_form_3.inline-form input,
-#inscricao_email form #_form_3._inline-form ._submit {
-  font-family: "IBM Plex Sans", Helvetica, sans-serif, "IBM Plex Sans", arial, sans-serif;
-}
-#inscricao_email form ._form-title {
-  font-size: 22px;
-  line-height: 22px;
-  font-weight: 600;
-  margin-bottom: 0;
-}
-#inscricao_email form #form_3:before,
-#inscricao_email form #form_3:after {
-  content: " ";
-  display: table;
-}
-#inscricao_email form #form_3:after {
-  clear: both;
-}
-#inscricao_email form._inline-style {
-  width: auto;
-  display: inline-block;
-}
-#inscricao_email form.inline-style input[type=text],
-#inscricao_email form #_form_3._inline-style input[type=date] {
-  padding: 10px 12px;
-}
-#inscricao_email form._inline-style button._inline-style {
-  position: relative;
-  top: 27px;
-}
-#inscricao_email form._inline-style p {
-  margin: 0;
-}
-#inscricao_email form._inline-style ._button-wrapper {
-  position: relative;
-  margin: 27px 12.5px 0 20px;
-}
-#inscricao_email form ._form-thank-you {
-  position: relative;
-  left: 0;
-  right: 0;
-  text-align: center;
-  font-size: 18px;
-}
-@media all and (min-width: 320px) and (max-width: 667px) {
-  #inscricao_email form._inline-form._inline-style ._inline-style._button-wrapper {
-    margin-top: 20px !important;
-    margin-left: 0 !important;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -41,8 +41,60 @@ nav#fix_header {
     transition: background .25s;
     z-index: 1000;
 
+    .logo_separator {
+        background: $brown;
+        width: .5px;
+        margin: auto 5px;
+        height: 50%;
+        display: none;
+    }
+
     &.scrolled {
         background: $brown;
+        #link_home {
+            .logo_color {
+                display: none;
+            }
+            .logo_white {
+                display: block;
+            }
+            .logo_separator {
+                background-color: white;
+                display: block;
+            }
+        }
+        #links {
+            a:not(.highlight) {
+                color: white;
+            }
+        }
+    }
+
+    #link_home {
+        display: flex;
+        flex-direction: row;
+        .logo_numem {
+            height: 50px;
+            margin: auto;
+        }
+        
+        .logo_white {
+            display: none;
+        }
+    
+        .logo_curso {
+            height: 30px;
+            margin: auto;
+        }
+
+        @media screen and (max-width: 650px) {
+            .logo_numem {
+                height: 30px;
+            }
+            .logo_curso {
+                height: 20px;
+            }
+        }
     }
 
     #links {
@@ -61,6 +113,10 @@ nav#fix_header {
                 font-size: 8pt;
             }
 
+            &:not(.highlight) {
+                color: $brown;
+            }
+
             &.highlight {
                 background: $green;
 
@@ -77,11 +133,6 @@ nav#fix_header {
                 }
             }
         }
-    }
-
-    #logo {
-        height: 50px;
-        margin: auto;
     }
 }
 

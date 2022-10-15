@@ -38,8 +38,51 @@ nav#fix_header {
   transition: background 0.25s;
   z-index: 1000;
 }
+nav#fix_header .logo_separator {
+  background: #82542d;
+  width: 0.5px;
+  margin: auto 5px;
+  height: 50%;
+  display: none;
+}
 nav#fix_header.scrolled {
   background: #82542d;
+}
+nav#fix_header.scrolled #link_home .logo_color {
+  display: none;
+}
+nav#fix_header.scrolled #link_home .logo_white {
+  display: block;
+}
+nav#fix_header.scrolled #link_home .logo_separator {
+  background-color: white;
+  display: block;
+}
+nav#fix_header.scrolled #links a:not(.highlight) {
+  color: white;
+}
+nav#fix_header #link_home {
+  display: flex;
+  flex-direction: row;
+}
+nav#fix_header #link_home .logo_numem {
+  height: 50px;
+  margin: auto;
+}
+nav#fix_header #link_home .logo_white {
+  display: none;
+}
+nav#fix_header #link_home .logo_curso {
+  height: 30px;
+  margin: auto;
+}
+@media screen and (max-width: 650px) {
+  nav#fix_header #link_home .logo_numem {
+    height: 30px;
+  }
+  nav#fix_header #link_home .logo_curso {
+    height: 20px;
+  }
 }
 nav#fix_header #links {
   flex-direction: row;
@@ -58,6 +101,9 @@ nav#fix_header #links a {
     font-size: 8pt;
   }
 }
+nav#fix_header #links a:not(.highlight) {
+  color: #82542d;
+}
 nav#fix_header #links a.highlight {
   background: #30734b;
 }
@@ -70,10 +116,6 @@ nav#fix_header #links a.highlight {
   nav#fix_header #links a.highlight.mobile {
     display: none;
   }
-}
-nav#fix_header #logo {
-  height: 50px;
-  margin: auto;
 }
 
 section {
