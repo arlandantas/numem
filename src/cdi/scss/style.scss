@@ -14,6 +14,7 @@
     align-items: center;
     text-align: center;
     font-weight: 600;
+    padding: 2em;
     #content {
         flex-direction: column;
         align-items: center;
@@ -156,396 +157,234 @@
     }
 }
 
-#professor {
-    background-color: transparent;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto;
-    column-gap: 2em;
-    row-gap: 3em;
-    font-size: 16pt;
-    padding: 0 2em;
-    align-content: center;
-
-    h1 {
-        color: $brown;
-        font-size: 2em;
-        margin: 0 0 .5em;
-    }
-
-    @media screen and (max-width: 700px) {
-        grid-template-columns: auto;
-        grid-template-rows: auto auto;
-    }
-
-    #img {
-        grid-row: 1 / 2;
-        grid-column: 1 / 2;
-
-        img {
-            width: 500px;
-            max-width: 40vw;
-
-            @media screen and (max-width: 700px) {
-                max-width: 90vw;
-            }
-        }
-
-        @media screen and (max-width: 700px) {
-            margin-top: 2em;
-        }
-    }
-
-    #text {
-        grid-row: 1 / 2;
-        grid-column: 2 / 3;
-
-        @media screen and (max-width: 700px) {
-            grid-row: 2 / 3;
-            grid-column: 1 / 2;
-        }
-
-        flex-direction: column;
-        max-width: 500px;
-    }
-}
-
-#programa {
-    font-size: 16pt;
-    background: $brown;
-    padding: 1em;
-    min-height: min-content;
-
-    h1 {
-        color: white;
-        font-size: 2em;
-        text-align: center;
-    }
-
-    #lista {
-        flex-direction: column;
-        width: 800px;
-        max-width: 100%;
-        line-height: 1.5em;
-
-        .pergunta {
-            margin: .5em;
-            overflow: hidden;
-            border-radius: .5em;
-            border: 1px solid white;
-
-            .titulo {
-                color: white;
-                cursor: pointer;
-                padding: 1em;
-                flex-direction: row;
-                justify-content: space-between;
-            }
-
-            .ck_pergunta {
-                display: none;
-            }
-
-            .ck_pergunta:not(:checked)~.conteudo {
-                display: none;
-            }
-
-            .conteudo {
-                padding: 0 1em 1em;
-                color: white;
-
-                ul {
-                    margin: 0 0 0 1em;
-                    padding: 0;
-                    li {
-                        display: list-item;
-                        list-style: disc;
-                    }
-                }
-
-                p {
-                    margin: 0;
-
-                    &:not(:first-child) {
-                        margin-top: .5em;
-                    }
-
-                    a,
-                    b {
-                        text-transform: none;
-                        display: contents;
-                    }
-                }
-            }
-        }
-    }
-}
-
 #relatos {
-    display: none;
-    min-height: fit-content;
-    padding: 4em 0;
-    h1 {
-        color: $green;
-        margin: .5em 2em;
-        text-align: center;
-    }
-
-    #pattern_separator {
-        display: none;
-        background: url("../images/pattern-azul.svg") 0 0 / auto 50% repeat;
-        width: 100%;
-        height: 100px;
-        opacity: .7;
-        margin-bottom: 4em;
-
-        @media screen and (max-width: 700px) {
-            height: 100px;
-        }
-    }
-
-    #list {
-        max-width: 100%;
-        width: 800px;
-        #itens {
-            flex-grow: 1;
-            flex-direction: row;
-
-            .relato {
-                flex-direction: column;
-                border-radius: .5em;
-                background: $cinza_claro;
-                padding: 1.5em;
-                margin: 1em;
-                color: $cinza_escuro;
-                flex-shrink: 0;
-                text-align: center;
-
-                .img {
-                    width: 150px;
-                    height: 150px;
-                    border-radius: 50%;
-                    overflow: hidden;
-                    margin: 0 auto 1.5em;
-                    flex-direction: row;
-                    justify-content: center;
-                    flex-wrap: nowrap;
-                    background: url('../images/novo16.webp') center/cover;
-
-                    img {
-                        height: 100%;
-                        width: auto;
-                        display: none;
-                    }
-                }
-
-                .nome {
-                    text-align: center;
-                    margin-top: 1em;
-                    color: $brown;
-                }
-            }
-        }
-    }
-}
-
-#comecar {
-    background: url("../images/pattern-cinza.svg") 0 0 / auto 50px repeat, $green;
-    flex-direction: column;
-
-    &>h1 {
-        color: $cinza_claro;
-        font-size: 2em;
-        margin: 2em 0;
+    #content {
         flex-direction: row;
-    }
-
-    #planos {
-        flex-direction: row;
-        margin: 0 0 2em;
-        flex-wrap: wrap;
-        justify-content: center;
-
-        .plano {
-            border-radius: 1em;
-            flex-direction: column;
-            align-items: center;
-            padding: 2em;
-            width: 400px;
-            max-width: 90vw;
-            color: $brown;
-            background: $cinza_claro;
-            margin: 1em;
-
-            &.bkg-blue {
-                color: $cinza_claro;
-            }
-
-            h1 {
-                font-size: 2.5em;
-                text-align: center;
-                height: 2em;
-                flex-direction: column;
-                justify-content: center;
-
-                small {
-                    font-size: .5em;
-                    line-height: 1em;
-                    font-weight: normal;
-                    b {
-                        display: contents;
-                    }
-                }
-            }
-
-            ul {
-                flex-direction: column;
-                margin: 0;
-                padding: 0;
-
-                li {
-                    padding: 0;
-                    margin: .5em 0;
-                    font-size: 1.25em;
-                    list-style: none;
-                    flex-direction: row;
-
-                    &::before {
-                        content: url('../images/fa-check.svg');
-                        margin: 0 1em 0 0;
-                        width: 1em;
-                        height: 1em;
-                        flex-shrink: 0;
-                    }
-
-                    &.disabled {
-                        &::before {
-                            content: url('../images/fa-times-circle.svg');
-                        }
-                    }
-                }
-            }
-
-            &:nth-child(1) {
-                #button a {
-                    font-size: .8em;
-                }
-            }
-
-            &:nth-child(2) {
-                #button a {
-                    animation-name: pulse;
-                    animation-duration: 2s;
-                    animation-iteration-count: infinite;
-                }
-            }
-
-            @media screen and (max-width: 600px) {
-                font-size: 10pt;
-            }
-        }
-    }
-
-    #button {
-        flex-direction: row;
-        justify-content: center;
         align-items: center;
-        margin-top: 2em;
-        font-size: 1.5em;
-
-        a {
-            padding: 1em 2em;
-            border-radius: .5em;
-            color: $cinza_claro;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        img {
+            margin: .5em;
+            width: calc(100% - 1em);
+            max-width: 350px;
+        }
+        
+        @media screen and (max-width: 600px) {
+            grid-template-columns: minmax(200px, 1fr);
         }
     }
 }
 
-@keyframes pulse {
-    0% {
-        transform: scale(1);
+#possivel {
+    margin: 0 auto;
+    width: 80vw;
+    min-height: min-content;
+    display: grid;
+    grid-template-areas:
+        "hr1 hr1"
+        "title title"
+        "text1 text2"
+        "hr2 hr2";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content min-content min-content;
+    @media screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "hr1"
+            "title"
+            "text1"
+            "text2"
+            "hr2";
     }
-
-    15% {
-        transform: scale(1);
+    .hr {
+        width: 100%;
+        height: 8px;
+        background: url(../images/handwrite_hr.svg) repeat-x center;
+        margin: 2em 0;
+        background-size: contain;
+        &:first-of-type {
+            grid-area: hr1;
+        }
+        &:last-of-type {
+            grid-area: hr2;
+        }
     }
-
-    20% {
-        transform: scale(1.02);
+    h1 {
+        grid-area: title;
+        text-align: center;
     }
-
-    25% {
-        transform: scale(1);
-    }
-
-    30% {
-        transform: scale(1.02);
-    }
-
-    35% {
-        transform: scale(1);
-    }
-
-    100% {
-        transform: scale(1);
+    div {
+        display: block;
+        &:nth-of-type(2) {
+            grid-area: text1;
+            font-weight: 600;
+            font-size: 1.2em;
+            padding-right: 2em;
+            i {
+                display: inline;
+                color: $purple;
+                font-style: normal;
+            }
+        
+            @media screen and (max-width: 600px) {
+                text-align: center;
+            }
+            &::after {
+                content: "";
+                display: block;
+                position: relative;
+                width: 100%;
+                background: url(../images/handwrite_curve_right_arrow.svg) no-repeat center;
+                @media screen and (min-width: 600px) {
+                    background-size: auto 80px;
+                    background-position: bottom right;
+                    top: 60px;
+                    right: -30px;
+                    height: 80px;
+                    margin: -80px 0 0 0;
+                }
+                @media screen and (max-width: 600px) {
+                    height: 100px;
+                    background-size: contain;
+                    background-position: center;
+                    position: relative;
+                    transform: rotate(90deg);
+                    width: 80px;
+                    margin: auto;
+                }
+            }
+        }
+        &:nth-of-type(3) {
+            grid-area: text2;
+            background-color: $purple;
+            border-radius: 1em;
+            color: $white;
+            padding: 2em;
+            font-size: .8em;
+        }
     }
 }
 
-#perguntas {
-    font-size: 16pt;
-    background: $cinza_claro;
-    padding: 1em;
-    min-height: min-content;
+#conheca {
+    text-align: center;
+    max-width: 80vw;
+    margin: 0 auto 4em;
+    min-height: fit-content;
+}
 
-    h1 {
-        color: $brown;
-        font-size: 2em;
-        text-align: center;
+#imagem {
+    background: #0f0e27;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    img {
+        width: 100vw;
+        margin: auto;
+        display: block;
+        max-width: 450px;
+        @media screen and (min-width: 800px) {
+            max-height: 80vh;
+            width: auto;
+            max-width: 100vw;
+        }
     }
+}
 
-    #lista {
-        flex-direction: column;
-        width: 800px;
-        max-width: 100%;
-        line-height: 1.5em;
+#facil {
+    min-height: fit-content;
+    width: 70vw;
+    margin: 2em auto;
+    text-align: center;
+    h1 {
+        display: block;
+        i {
+            display: inline;
+            color: $purple;
+            font-style: normal;
+        }
+    }
+}
 
-        .pergunta {
-            margin: .5em;
-            overflow: hidden;
-            border-radius: .5em;
-            border: 1px solid $green;
-
-            .titulo {
-                color: $green;
-                cursor: pointer;
-                padding: 1em;
-                flex-direction: row;
-                justify-content: space-between;
+#passos {
+    padding: 0 10vw;
+    min-height: fit-content;
+    .passo {
+        display: grid;
+        grid-template-areas:
+            "h1 h2"
+            "h1 span"
+            "h1 button";
+        grid-template-columns: 1fr 3fr;
+        // grid-template-rows: min-content min-content min-content min-content;
+        @media screen and (max-width: 600px) {
+            grid-template-areas:
+                "h1"
+                "h2"
+                "span"
+                "button";
+            grid-template-columns: 1fr;
+            border-left: 5px solid;
+            padding: 1em 0 1em 1em;
+            text-align: center;
+        }
+        &:nth-of-type(1) {
+            border-color: #D9D9D9;
+            h1 {
+                border-color: #D9D9D9;
             }
-
-            .ck_pergunta {
-                display: none;
+        }
+        &:nth-of-type(2) {
+            border-color: #4A3AFF;
+            h1 {
+                border-color: #4A3AFF;
             }
-
-            .ck_pergunta:not(:checked)~.conteudo {
-                display: none;
+        }
+        &:nth-of-type(3) {
+            border-color: #FF7A00;
+            h1 {
+                border-color: #FF7A00;
             }
-
-            .conteudo {
-                padding: 0 1em 1em;
-
-                p {
-                    margin: 0;
-
-                    &:not(:first-child) {
-                        margin-top: .5em;
-                    }
-
-                    a,
-                    b {
-                        text-transform: none;
-                        display: contents;
-                    }
+        }
+        h1 {
+            grid-area: h1;
+            margin: 0 1em 0 0;
+            padding-right: 1em;
+            min-width: 150px;
+            @media screen and (min-width: 600px) {
+                border-right: 5px solid;
+            }
+        }
+        h2 {
+            grid-area: h2;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+        span {
+            grid-area: span;
+        }
+        button {
+            grid-area: button;
+            background: none;
+            color: $black;
+            border: 1px solid $orange;
+            border-radius: 1em;
+            padding: 1em 3em;
+            text-align: center;
+            font-weight: 600;
+            @media screen and (min-width: 600px) {
+                margin-left: 80px;
+                &::before {
+                    content: "";
+                    display: block;
+                    position: relative;
+                    width: 60px;
+                    background: url(../images/handwrite_amazon_arrow.svg) no-repeat center;
+                    height: 40px;
+                    margin-bottom: -40px;
+                    background-size: contain;
+                    margin-left: -120px;
+                    top: -12px;
                 }
             }
         }
