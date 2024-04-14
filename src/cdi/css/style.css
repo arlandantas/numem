@@ -282,11 +282,13 @@
   display: block;
   max-width: 450px;
 }
-#imagem img#desktop {
-  display: none;
-}
-#imagem img#mobile {
-  display: block;
+@media screen and (max-width: 799px) {
+  #imagem img#desktop {
+    display: none;
+  }
+  #imagem img#mobile {
+    display: block;
+  }
 }
 @media screen and (min-width: 800px) {
   #imagem img {

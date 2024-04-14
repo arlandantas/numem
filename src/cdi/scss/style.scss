@@ -283,11 +283,13 @@
         margin: auto;
         display: block;
         max-width: 450px;
-        &#desktop {
-            display: none;
-        }
-        &#mobile {
-            display: block;
+        @media screen and (max-width: 799px) {
+            &#desktop {
+                display: none;
+            }
+            &#mobile {
+                display: block;
+            }
         }
         @media screen and (min-width: 800px) {
             max-height: 80vh;
