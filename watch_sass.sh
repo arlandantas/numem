@@ -1,2 +1,2 @@
 #!bash
-sass --watch ./src/scss:./src/css
+sass --watch ./src/cdi/scss:./src/cdi/css
