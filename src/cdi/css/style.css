@@ -62,6 +62,21 @@
     font-size: 16px;
   }
 }
+#home #continue_explorando {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.8em;
+  margin-top: 3em;
+}
+#home #continue_explorando img {
+  height: 30px;
+  margin-top: 1em;
+}
+@media screen and (min-width: 600px) {
+  #home #continue_explorando {
+    display: none;
+  }
+}
 
 #assista {
   position: relative;
@@ -190,17 +205,10 @@
     grid-template-areas: "hr1" "title" "text1" "text2" "hr2";
   }
 }
-#possivel .hr {
-  width: 100%;
-  height: 8px;
-  background: url(../images/handwrite_hr.svg) repeat-x center;
-  margin: 2em 0;
-  background-size: contain;
-}
-#possivel .hr:first-of-type {
+#possivel hr:first-of-type {
   grid-area: hr1;
 }
-#possivel .hr:last-of-type {
+#possivel hr:last-of-type {
   grid-area: hr2;
 }
 #possivel h1 {
@@ -210,23 +218,23 @@
 #possivel div {
   display: block;
 }
-#possivel div:nth-of-type(2) {
+#possivel div:nth-of-type(1) {
   grid-area: text1;
   font-weight: 600;
   font-size: 1.2em;
   padding-right: 2em;
 }
-#possivel div:nth-of-type(2) i {
+#possivel div:nth-of-type(1) i {
   display: inline;
   color: #4A3AFF;
   font-style: normal;
 }
 @media screen and (max-width: 600px) {
-  #possivel div:nth-of-type(2) {
+  #possivel div:nth-of-type(1) {
     text-align: center;
   }
 }
-#possivel div:nth-of-type(2)::after {
+#possivel div:nth-of-type(1)::after {
   content: "";
   display: block;
   position: relative;
@@ -234,7 +242,7 @@
   background: url(../images/handwrite_curve_right_arrow.svg) no-repeat center;
 }
 @media screen and (min-width: 600px) {
-  #possivel div:nth-of-type(2)::after {
+  #possivel div:nth-of-type(1)::after {
     background-size: auto 80px;
     background-position: bottom right;
     top: 60px;
@@ -244,7 +252,7 @@
   }
 }
 @media screen and (max-width: 600px) {
-  #possivel div:nth-of-type(2)::after {
+  #possivel div:nth-of-type(1)::after {
     height: 100px;
     background-size: contain;
     background-position: center;
@@ -254,7 +262,7 @@
     margin: auto;
   }
 }
-#possivel div:nth-of-type(3) {
+#possivel div:nth-of-type(2) {
   grid-area: text2;
   background-color: #4A3AFF;
   border-radius: 1em;
@@ -322,12 +330,12 @@
 #passos {
   padding: 0 10vw;
   min-height: fit-content;
-  margin-bottom: 2em;
 }
 #passos .passo {
   display: grid;
   grid-template-areas: "h1 h2" "h1 span" "h1 button";
   grid-template-columns: 1fr 3fr;
+  width: 100%;
 }
 @media screen and (max-width: 600px) {
   #passos .passo {
@@ -401,6 +409,110 @@
     margin-left: -120px;
     top: -12px;
   }
+}
+
+#botao_assista {
+  padding: 4em 10vw 2em;
+  min-height: fit-content;
+}
+#botao_assista a {
+  background: #4A3AFF;
+  color: white;
+  padding: 1em 3em;
+  border-radius: 1em;
+  text-transform: none;
+  font-size: 1.4em;
+  text-align: center;
+  max-width: 800px;
+}
+@media screen and (max-width: 600px) {
+  #botao_assista a {
+    font-size: 0.8em;
+  }
+}
+
+hr {
+  display: block;
+  width: 80vw;
+  height: 8px;
+  background: url(../images/handwrite_hr.svg) repeat-x center;
+  margin: 2em auto;
+  background-size: contain;
+  border: none;
+}
+
+#comparativo {
+  flex-direction: row;
+  min-height: fit-content;
+  text-align: center;
+  width: 80vw;
+  margin: auto;
+  font-size: 1.5em;
+}
+@media screen and (min-width: 601px) {
+  #comparativo {
+    margin: 2em auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  #comparativo {
+    flex-direction: column;
+    font-size: 1em;
+  }
+}
+#comparativo > div {
+  flex-grow: 1;
+  width: 100%;
+  border-radius: 1em;
+  font-weight: 600;
+  color: #07215B;
+}
+#comparativo > div#numem {
+  background: #07215B;
+  color: #FF7A00;
+}
+#comparativo > div#outros {
+  background: #eee;
+  margin-right: 1em;
+}
+@media screen and (max-width: 600px) {
+  #comparativo > div#outros {
+    margin-right: 0;
+    margin-bottom: 1em;
+  }
+}
+#comparativo > div#outros ul li {
+  border-bottom-color: #07215B;
+}
+#comparativo > div #title {
+  height: 3em;
+  justify-content: center;
+  font-size: 1.5em;
+}
+#comparativo > div #seta {
+  content: "";
+  display: block;
+  height: 30px;
+}
+#comparativo > div ul {
+  padding: 0;
+  margin: 0 auto;
+  width: 80%;
+}
+#comparativo > div ul li {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  border-bottom: 2px solid #D9D9D9;
+}
+#comparativo > div ul li:last-of-type {
+  border-bottom: none;
+}
+#comparativo > div ul li span {
+  flex-grow: 1;
+  flex-basis: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */
