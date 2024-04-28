@@ -1,11 +1,13 @@
 @import './colors.scss';
 
-.bkg-orange {
-    background: $green  !important;
+span.orange {
+    color: $orange !important;
+    display: inline;
 }
 
-.bkg-blue {
-    background: $brown  !important;
+span.blue {
+    color: $blue !important;
+    display: inline;
 }
 
 #home {
@@ -239,6 +241,7 @@
         
             @media screen and (max-width: 600px) {
                 text-align: center;
+                padding-right: 0;
             }
             &::after {
                 content: "";
@@ -292,7 +295,7 @@
         width: 100vw;
         margin: auto;
         display: block;
-        max-width: 450px;
+        // max-width: 450px;
         @media screen and (max-width: 799px) {
             &#desktop {
                 display: none;
@@ -302,9 +305,9 @@
             }
         }
         @media screen and (min-width: 800px) {
-            max-height: 80vh;
-            width: auto;
-            max-width: 100vw;
+            // max-height: 80vh;
+            // width: auto;
+            // max-width: 100vw;
             &#desktop {
                 display: block;
             }
@@ -458,16 +461,21 @@ hr {
     @media screen and (max-width: 600px) {
         flex-direction: column;
         font-size: 1em;
+        margin-bottom: 2em;
     }
     & > div {
         flex-grow: 1;
         width: 100%;
-        border-radius: 1em;
+        border-radius: .5em;
         font-weight: 600;
         color: $blue;
+        padding-bottom: .7em;
         &#numem {
             background: $blue;
             color: $orange;
+            #logo {
+                height: 1em;
+            }
         }
         &#outros {
             background: #eee;
@@ -486,6 +494,7 @@ hr {
             height: 3em;
             justify-content: center;
             font-size: 1.5em;
+            margin-bottom: -.5em;
         }
         #seta {
             content: "";
@@ -509,6 +518,125 @@ hr {
                 span {
                     flex-grow: 1;
                     flex-basis: 50%;
+                }
+            }
+        }
+    }
+}
+
+#comofunciona {
+    border: 1px solid $black;
+    border-radius: 1em;
+    margin: 2em auto;
+    padding: 2em;
+    padding-bottom: 3em;
+    width: 80vw;
+    text-align: center;
+    h1 {
+        display: block;
+        margin: 0 0 1em 0;
+        font-size: 2em;
+        @media screen and (max-width: 600px) {
+            font-size: 1.5em;
+        }
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        width: 550px;
+        max-width: 100%;
+        li {
+            display: block;
+            p {
+                margin: 0;
+                &:not(:last-of-type) {
+                    margin-bottom: 1em;
+                }
+            }
+            &:not(:last-of-type) {
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    // margin: 1em 0;
+                    background: url(../images/handwrite_curve_down_arrow.svg) no-repeat center;
+                    // background-position: bottom right;
+                    background-size: auto 25px;
+                }
+            }
+        }
+    }
+    span.blue {
+        font-weight: bold;
+    }
+}
+
+#comece {
+    margin: 0 auto;
+    // width: 80vw;
+    padding: 2em 10vw;
+    min-height: min-content;
+    display: grid;
+    grid-template-areas:
+        "titulo preco"
+        "imagem vantagens";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, min-content);
+    background: $purple;
+    color: $white;
+    @media screen and (max-width: 600px) {
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "titulo"
+            "preco"
+            "vantagens";
+    }
+    div {
+        &#titulo {
+            grid-area: titulo;
+            font-weight: 600;
+            font-size: 1.5em;
+            @media screen and (max-width: 600px) {
+                font-size: 1.25em;
+            }
+        }
+        &#preco {
+            font-weight: 600;
+            grid-area: preco;
+            font-size: 2em;
+            border-bottom: 1px solid $white;
+            padding: 1em;
+            @media screen and (max-width: 600px) {
+                font-size: 1.25em;
+                border-bottom: none;
+                padding-top: 2em;
+            }
+        }
+        &#dispositivos {
+            grid-area: imagem;
+            width: 100%;
+            flex-direction: row;
+            justify-content: flex-end;
+            img {
+                width: 100%;
+                max-width: 600px;
+                margin: -10% 0;
+                margin-right: -20%;
+            }
+            @media screen and (max-width: 600px) {
+                display: none;
+            }
+        }
+        &#vantagens {
+            grid-area: vantagens;
+            font-weight: 300;
+            ul {
+                margin: 1.5em;
+                padding: 0;
+                li {
+                    margin: .5em;
                 }
             }
         }
