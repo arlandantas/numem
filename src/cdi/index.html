@@ -57,6 +57,9 @@
     <!-- End Meta Pixel Code -->
 </head>
 <body>
+    <section id="initial_logo">
+        <img src="./images/logotipo_branco.png" alt="Logotipo da escola numem">
+    </section>
     <section id="home">
         <div id="content">
             <div id="title">
@@ -93,9 +96,33 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
         ></iframe>
-        <button onclick="window.location.hash = 'colocarempratica'">
-            <span>Quero colocar a palavra de Deus em prática</span>
-        </button>
+        <div class="cta-group">
+            <button>
+                <span>Quero colocar a palavra de Deus em prática</span>
+            </button>
+            <div id="imgs">
+                <img src="./images/hotmart.png" alt="Logotipo da hotmart">
+                <img src="./images/visa.png" alt="Logotipo da Visa">
+                <img src="./images/mastercard.png" alt="Logotipo da mastercard">
+                <img src="./images/Paypal.png" alt="Logotipo do Paypal">
+                <img src="./images/pix.png" alt="Símbolo do PIX">
+                <img src="./images/boleto.png" alt="Codigo de barras representando boleto">
+            </div>
+            <div id="destaques">
+                <div>
+                    <img src="./images/calendar.svg" alt="Ícone de calendário">
+                    <span>1 ano de acesso</span>
+                </div>
+                <div>
+                    <img src="./images/video_call.svg" alt="Ícone de vídeo-chamada">
+                    <span>Suporte ao vivo</span>
+                </div>
+                <div>
+                    <img src="./images/check_badge.svg" alt="Ícone de medalha">
+                    <span>Suporte ao vivo</span>
+                </div>
+            </div>
+        </div>
     </section>
     <section id="relatos">
         <div id="content">
@@ -143,19 +170,28 @@
             <h1>Livro da estante</h1>
             <h2>Objetivo: Aprender a construir as bases</h2>
             <p>A teoria também importa. Aqui você vai aprender os conceitos mais importantes para vida cristã.</p>
-            <button>+Da porta pra dentro ->Livros, doutrinas, Bíblia</button>
+            <button>
+                <h1>Da porta pra dentro</h1>
+                <span>Livros, doutrinas, Bíblia</span>
+            </button>
         </div>
         <div class="passo">
             <h1>Floresta Sombria</h1>
             <h2>Objetivo: Colocar a mão na massa</h2>
             <p>O mundo real não é um parque de diversões. Para continuar firme com Deus é preciso praticar continuamente o que você aprendeu.</p>
-            <button>+ A Prova de Noé -> Prática, Experiência, Desafios</button>
+            <button>
+                <h1>A Prova de Noé</h1>
+                <span>Prática, Experiência, Desafios</span>
+            </button>
         </div>
         <div class="passo">
             <h1>Máquina do Tempo</h1>
             <h2>Objetivo: Coletar a experiência adquirida</h2>
             <p>Todo aprendizado precisa ser submetido à avaliação. Para interiorizar o conhecimento do livro e a prática da floresta você precisa “voltar no tempo”.</p>
-            <button>+ Café Polaroid -> Avaliação, acompanhamento, dúvidas</button>
+            <button>
+                <h1>Café Polaroid</h1>
+                <span>Avaliação, acompanhamento, dúvidas</span>
+            </button>
         </div>
     </section>
     <section id="botao_assista">
@@ -163,27 +199,56 @@
     </section>
     <hr />
     <section id="comparativo">
-        <div id="outros">
-            <div id="title">
-                Outros cursos
+        <div id="cards">
+            <div id="outros">
+                <div id="title">
+                    Outros cursos
+                    <img src="./images/cross_red_handwrite.png" alt="Letra x vermelha" id="icon">
+                </div>
+                <ul>
+                    <li>Aulas teóricas</li>
+                    <li>Linguagem acadêmica</li>
+                    <li>Sem acompanhamento</li>
+                </ul>
             </div>
-            <img src="./images/handwrite_curve_down_arrow_blue.svg" alt="Seta para baixo" id="seta">
-            <ul>
-                <li>Aulas teóricas</li>
-                <li>Linguagem acadêmica</li>
-                <li>Sem acompanhamento</li>
-            </ul>
+            <div id="numem">
+                <div id="title">
+                    <img src="./images/logotipo_blue_orange.svg" alt="Logotipo Numem" id="logo">
+                    <img src="./images/check_green_handwrite.png" alt="Símbolo de ok verde" id="icon">
+                </div>
+                <ul>
+                    <li>Metodologia própria (CDI)</li>
+                    <li>Linguagem simples</li>
+                    <li>Suporte ao vivo</li>
+                </ul>
+            </div>
         </div>
-        <div id="numem">
-            <div id="title">
-                <img src="./images/logotipo_white.svg" alt="Logotipo Numem" id="logo">
+        <div class="cta-group">
+            <button>
+                <span>Quero colocar a palavra de Deus em prática</span>
+            </button>
+            <div id="imgs">
+                <img src="./images/hotmart.png" alt="Logotipo da hotmart">
+                <img src="./images/visa.png" alt="Logotipo da Visa">
+                <img src="./images/mastercard.png" alt="Logotipo da mastercard">
+                <img src="./images/Paypal.png" alt="Logotipo do Paypal">
+                <img src="./images/pix.png" alt="Símbolo do PIX">
+                <img src="./images/boleto.png" alt="Codigo de barras representando boleto">
             </div>
-            <img src="./images/handwrite_curve_down_arrow.svg" alt="Seta para baixo" id="seta">
-            <ul>
-                <li>Metodologia própria (CDI)</li>
-                <li>Linguagem simples</li>
-                <li>Suporte ao vivo</li>
-            </ul>
+            <div id="destaques">
+                <div>
+                    <img src="./images/calendar.svg" alt="Ícone de calendário">
+                    <span>1 ano de acesso</span>
+                </div>
+                <div>
+                    <img src="./images/video_call.svg" alt="Ícone de vídeo-chamada">
+                    <span>Suporte ao vivo</span>
+                </div>
+                <div>
+                    <img src="./images/check_badge.svg" alt="Ícone de medalha">
+                    <span>Suporte ao vivo</span>
+                </div>
+            </div>
         </div>
     </section>
     <section id="comofunciona">
@@ -245,6 +310,19 @@
             <p><span class="crossed">De R$ 97</span>por R$ 0</p>
         </div>
     </section>
+    <section id="cursos">
+        <h1>Se tornando aluno você também receberá  dois cursos </h1>
+        <div class="curso">
+            <img src="./images/simplificando.png" alt="Simplificando o devocional">
+            <h1>Curso simplificando o devocional</h1>
+            <span>[todo o material do curso]</span>
+        </div>
+        <div class="curso">
+            <img src="./images/alicerces.png" alt="Alicerces da vida cristã">
+            <h1>Minicurso alicerces da vida cristã</h1>
+            <span>[todo o material do curso]</span>
+        </div>
+    </section>
     <hr>
     <section id="autor">
         <span id="tag">Sobre o autor</span>
@@ -265,6 +343,33 @@
             <div id="img3"></div>
         </div>
         <p>É presbítero na Igreja Presbiteriana do Brasil em Poços de Caldas (MG), graduado em Engenharia Química (UNIFAL) e pós-graduado em Teologia Aplicada pelo Centro de Pós-Graduação Andrew Jumper (CPAJ) e produtor de conteúdo nas redes sociais.</p>
+        <div class="cta-group">
+            <button>
+                <span>Quero colocar a palavra de Deus em prática</span>
+            </button>
+            <div id="imgs">
+                <img src="./images/hotmart.png" alt="Logotipo da hotmart">
+                <img src="./images/visa.png" alt="Logotipo da Visa">
+                <img src="./images/mastercard.png" alt="Logotipo da mastercard">
+                <img src="./images/Paypal.png" alt="Logotipo do Paypal">
+                <img src="./images/pix.png" alt="Símbolo do PIX">
+                <img src="./images/boleto.png" alt="Codigo de barras representando boleto">
+            </div>
+            <div id="destaques">
+                <div>
+                    <img src="./images/calendar.svg" alt="Ícone de calendário">
+                    <span>1 ano de acesso</span>
+                </div>
+                <div>
+                    <img src="./images/video_call.svg" alt="Ícone de vídeo-chamada">
+                    <span>Suporte ao vivo</span>
+                </div>
+                <div>
+                    <img src="./images/check_badge.svg" alt="Ícone de medalha">
+                    <span>Suporte ao vivo</span>
+                </div>
+            </div>
+        </div>
     </section>
     <hr>
     <section id="faq">
@@ -311,29 +416,31 @@
     </section>
     <hr>
     <section id="colocarempratica">
-        <button>
-            <span>Quero colocar a palavra de Deus em prática</span>
-        </button>
-        <div id="imgs">
-            <img src="./images/hotmart.png" alt="Logotipo da hotmart">
-            <img src="./images/visa.png" alt="Logotipo da Visa">
-            <img src="./images/mastercard.png" alt="Logotipo da mastercard">
-            <img src="./images/Paypal.png" alt="Logotipo do Paypal">
-            <img src="./images/pix.png" alt="Símbolo do PIX">
-            <img src="./images/boleto.png" alt="Codigo de barras representando boleto">
-        </div>
-        <div id="destaques">
-            <div>
-                <img src="./images/calendar.svg" alt="Ícone de calendário">
-                <span>1 ano de acesso</span>
+        <div class="cta-group">
+            <button>
+                <span>Quero colocar a palavra de Deus em prática</span>
+            </button>
+            <div id="imgs">
+                <img src="./images/hotmart.png" alt="Logotipo da hotmart">
+                <img src="./images/visa.png" alt="Logotipo da Visa">
+                <img src="./images/mastercard.png" alt="Logotipo da mastercard">
+                <img src="./images/Paypal.png" alt="Logotipo do Paypal">
+                <img src="./images/pix.png" alt="Símbolo do PIX">
+                <img src="./images/boleto.png" alt="Codigo de barras representando boleto">
             </div>
-            <div>
-                <img src="./images/video_call.svg" alt="Ícone de vídeo-chamada">
-                <span>Suporte ao vivo</span>
-            </div>
-            <div>
-                <img src="./images/check_badge.svg" alt="Ícone de medalha">
-                <span>Suporte ao vivo</span>
+            <div id="destaques">
+                <div>
+                    <img src="./images/calendar.svg" alt="Ícone de calendário">
+                    <span>1 ano de acesso</span>
+                </div>
+                <div>
+                    <img src="./images/video_call.svg" alt="Ícone de vídeo-chamada">
+                    <span>Suporte ao vivo</span>
+                </div>
+                <div>
+                    <img src="./images/check_badge.svg" alt="Ícone de medalha">
+                    <span>Suporte ao vivo</span>
+                </div>
             </div>
         </div>
     </section>

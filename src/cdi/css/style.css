@@ -8,6 +8,27 @@ span.blue {
   display: inline;
 }
 
+#initial_logo {
+  width: 100%;
+  height: 100px;
+  background-color: #4A3AFF;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: fit-content;
+}
+#initial_logo img {
+  height: 40px;
+}
+@media screen and (max-width: 800px) {
+  #initial_logo {
+    height: 80px;
+  }
+  #initial_logo img {
+    height: 30px;
+  }
+}
+
 #home {
   position: relative;
   flex-direction: column;
@@ -15,6 +36,7 @@ span.blue {
   text-align: center;
   font-weight: 600;
   padding: 2em;
+  min-height: calc(80vh - 100px);
   font-size: 32px;
 }
 #home #content {
@@ -390,8 +412,17 @@ span.blue {
   text-align: center;
   font-weight: 600;
 }
+@media screen and (max-width: 600px) {
+  #passos .passo button {
+    flex-direction: column;
+    text-align: left;
+    padding: 1em 1.5em;
+  }
+}
 @media screen and (min-width: 600px) {
   #passos .passo button {
+    flex-direction: row;
+    place-items: center;
     margin-left: 80px;
   }
   #passos .passo button::before {
@@ -406,6 +437,38 @@ span.blue {
     margin-left: -120px;
     top: -12px;
   }
+}
+#passos .passo button h1 {
+  border-right: none;
+  margin: 0;
+  padding-right: 0;
+}
+@media screen and (min-width: 600px) {
+  #passos .passo button h1 {
+    margin-left: 2em;
+  }
+}
+#passos .passo button span {
+  margin: auto 0 auto 40px;
+  margin-top: 1.5em;
+}
+@media screen and (min-width: 600px) {
+  #passos .passo button span {
+    margin-top: 2em;
+    margin-left: 60px;
+  }
+}
+#passos .passo button span::before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 30px;
+  background: url(../images/handwrite_amazon_arrow.svg) no-repeat center;
+  height: 20px;
+  margin-bottom: -40px;
+  background-size: contain;
+  margin-left: -40px;
+  top: -20px;
 }
 
 #botao_assista {
@@ -438,82 +501,87 @@ hr {
   border: none;
 }
 
-#comparativo {
-  flex-direction: row;
+#comparativo #cards {
   min-height: fit-content;
+  flex-direction: row;
   text-align: center;
   width: 80vw;
   margin: auto;
   font-size: 1.5em;
 }
 @media screen and (min-width: 601px) {
-  #comparativo {
+  #comparativo #cards {
     margin: 2em auto;
   }
 }
 @media screen and (max-width: 600px) {
-  #comparativo {
+  #comparativo #cards {
     flex-direction: column;
     font-size: 1em;
     margin-bottom: 2em;
   }
 }
-#comparativo > div {
+#comparativo #cards > div {
   flex-grow: 1;
   width: 100%;
   border-radius: 0.5em;
   font-weight: 600;
-  color: #07215B;
-  padding-bottom: 0.7em;
+  color: #000;
+  border: 1px solid black;
 }
-#comparativo > div#numem {
-  background: #07215B;
-  color: #FF7A00;
-}
-#comparativo > div#numem #logo {
+#comparativo #cards > div#numem #logo {
   height: 1em;
 }
-#comparativo > div#outros {
-  background: #eee;
+#comparativo #cards > div#outros {
   margin-right: 1em;
 }
 @media screen and (max-width: 600px) {
-  #comparativo > div#outros {
+  #comparativo #cards > div#outros {
     margin-right: 0;
     margin-bottom: 1em;
   }
 }
-#comparativo > div#outros ul li {
+#comparativo #cards > div#outros ul li {
   border-bottom-color: #07215B;
 }
-#comparativo > div #title {
+#comparativo #cards > div #title {
   height: 3em;
   justify-content: center;
   font-size: 1.5em;
-  margin-bottom: -0.5em;
+  border-bottom: 1px solid #000;
+  flex-direction: row;
+  place-items: center;
 }
-#comparativo > div #seta {
+#comparativo #cards > div #title img#icon {
+  margin-left: 0.75em;
+  width: 1.5em;
+}
+@media screen and (max-width: 600px) {
+  #comparativo #cards > div #title img#icon {
+    width: 1em;
+  }
+}
+#comparativo #cards > div #seta {
   content: "";
   display: block;
   height: 30px;
 }
-#comparativo > div ul {
+#comparativo #cards > div ul {
   padding: 0;
-  margin: 0 auto;
+  margin: auto auto;
   width: 80%;
 }
-#comparativo > div ul li {
+#comparativo #cards > div ul li {
   list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1em;
-  border-bottom: 2px solid #D9D9D9;
 }
-#comparativo > div ul li:last-of-type {
+#comparativo #cards > div ul li:last-of-type {
   border-bottom: none;
 }
-#comparativo > div ul li span {
+#comparativo #cards > div ul li span {
   flex-grow: 1;
   flex-basis: 50%;
 }
@@ -633,6 +701,35 @@ hr {
 }
 #comece div#vantagens ul li {
   margin: 0.5em;
+}
+
+#cursos {
+  margin: 0 auto;
+  padding: 2em 10vw;
+  min-height: min-content;
+  display: none;
+}
+#cursos .curso {
+  display: grid;
+  grid-template-areas: "img h1" "img span";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, min-content);
+}
+@media screen and (max-width: 600px) {
+  #cursos .curso {
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-areas: "img" "h1" "span";
+  }
+}
+#cursos .curso h1 {
+  grid-area: "h1";
+}
+#cursos .curso span {
+  grid-area: "span";
+}
+#cursos .curso img {
+  grid-area: "img";
 }
 
 #bonus {
@@ -834,8 +931,11 @@ hr {
   text-decoration: underline;
 }
 
-#colocarempratica button {
-  margin-top: 1em;
+.cta-group {
+  width: 100vw;
+}
+.cta-group button {
+  margin: 1em auto 0;
   background: #FF7A00;
   color: #fff;
   border: none;
@@ -849,19 +949,19 @@ hr {
   font-size: 20px;
   font-weight: 600;
 }
-#colocarempratica button span {
+.cta-group button span {
   margin: auto;
   max-width: 400px;
 }
 @media screen and (max-width: 600px) {
-  #colocarempratica button {
+  .cta-group button {
     font-size: 12px;
   }
-  #colocarempratica button span {
+  .cta-group button span {
     max-width: 200px;
   }
 }
-#colocarempratica #imgs {
+.cta-group #imgs {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
@@ -869,11 +969,11 @@ hr {
   width: 80vw;
   margin: 2em 10vw 0;
 }
-#colocarempratica #imgs img {
+.cta-group #imgs img {
   height: 25px;
   margin: 1em;
 }
-#colocarempratica #destaques {
+.cta-group #destaques {
   flex-direction: row;
   justify-content: space-around;
   width: 80vw;
@@ -881,20 +981,20 @@ hr {
   align-items: self-end;
 }
 @media screen and (max-width: 600px) {
-  #colocarempratica #destaques {
+  .cta-group #destaques {
     align-items: center;
     flex-direction: column;
   }
 }
-#colocarempratica #destaques div {
+.cta-group #destaques div {
   font-weight: 600;
 }
 @media screen and (max-width: 600px) {
-  #colocarempratica #destaques div {
+  .cta-group #destaques div {
     margin: 0.5em;
   }
 }
-#colocarempratica #destaques div img {
+.cta-group #destaques div img {
   height: 50px;
   margin: 0.5em;
 }
