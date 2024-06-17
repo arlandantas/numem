@@ -707,13 +707,17 @@ hr {
   margin: 0 auto;
   padding: 2em 10vw;
   min-height: min-content;
-  display: none;
+}
+#cursos h1 {
+  text-align: center;
 }
 #cursos .curso {
   display: grid;
   grid-template-areas: "img h1" "img span";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(2, min-content);
+  gap: 0 1em;
+  margin: 0.5em;
 }
 @media screen and (max-width: 600px) {
   #cursos .curso {
@@ -723,13 +727,23 @@ hr {
   }
 }
 #cursos .curso h1 {
-  grid-area: "h1";
+  grid-area: h1;
+  font-size: 1.2em;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 600px) {
+  #cursos .curso h1 {
+    text-align: left;
+  }
 }
 #cursos .curso span {
-  grid-area: "span";
+  grid-area: span;
 }
 #cursos .curso img {
-  grid-area: "img";
+  grid-area: img;
+  max-width: 80vw;
+  width: 400px;
 }
 
 #bonus {
@@ -929,6 +943,11 @@ hr {
   text-transform: none;
   color: inherit;
   text-decoration: underline;
+}
+
+#colocarempratica {
+  min-height: fit-content;
+  margin: 4em auto;
 }
 
 .cta-group {

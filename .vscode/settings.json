@@ -5,5 +5,6 @@
     "**/*.scss",
     "**/*.sass",
     "**/*.ts"
-  ]
+  ],
+  "livePreview.defaultPreviewPath": "/src/cdi/index.html"
 }
